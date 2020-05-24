@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormAccueil
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,32 +20,32 @@ Partial Class FormAccueil
     'REMARQUE : la procédure suivante est requise par le Concepteur Windows Form
     'Elle peut être modifiée à l'aide du Concepteur Windows Form.  
     'Ne la modifiez pas à l'aide de l'éditeur de code.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.ButtonInscription = New System.Windows.Forms.Button()
+        Me.ButtonInscrip = New System.Windows.Forms.Button()
         Me.ButtonModif = New System.Windows.Forms.Button()
         Me.ButtonSupp = New System.Windows.Forms.Button()
         Me.LabelAccueil = New System.Windows.Forms.Label()
         Me.ButtonEtat = New System.Windows.Forms.Button()
-        Me.BilanProv = New System.Windows.Forms.Button()
-        Me.ButtonFinInscription = New System.Windows.Forms.Button()
+        Me.ButtonBilanProv = New System.Windows.Forms.Button()
+        Me.ButtonFinInscrip = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'ButtonInscription
+        'ButtonInscrip
         '
-        Me.ButtonInscription.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonInscription.Location = New System.Drawing.Point(68, 138)
-        Me.ButtonInscription.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
-        Me.ButtonInscription.Name = "ButtonInscription"
-        Me.ButtonInscription.Size = New System.Drawing.Size(149, 71)
-        Me.ButtonInscription.TabIndex = 0
-        Me.ButtonInscription.Text = "Inscription"
-        Me.ButtonInscription.UseVisualStyleBackColor = True
+        Me.ButtonInscrip.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonInscrip.Location = New System.Drawing.Point(69, 114)
+        Me.ButtonInscrip.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.ButtonInscrip.Name = "ButtonInscrip"
+        Me.ButtonInscrip.Size = New System.Drawing.Size(149, 71)
+        Me.ButtonInscrip.TabIndex = 0
+        Me.ButtonInscrip.Text = "Inscription"
+        Me.ButtonInscrip.UseVisualStyleBackColor = True
         '
         'ButtonModif
         '
         Me.ButtonModif.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonModif.Location = New System.Drawing.Point(284, 138)
+        Me.ButtonModif.Location = New System.Drawing.Point(272, 114)
         Me.ButtonModif.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ButtonModif.Name = "ButtonModif"
         Me.ButtonModif.Size = New System.Drawing.Size(149, 71)
@@ -56,10 +56,10 @@ Partial Class FormAccueil
         'ButtonSupp
         '
         Me.ButtonSupp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonSupp.Location = New System.Drawing.Point(496, 138)
+        Me.ButtonSupp.Location = New System.Drawing.Point(471, 114)
         Me.ButtonSupp.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ButtonSupp.Name = "ButtonSupp"
-        Me.ButtonSupp.Size = New System.Drawing.Size(149, 72)
+        Me.ButtonSupp.Size = New System.Drawing.Size(149, 71)
         Me.ButtonSupp.TabIndex = 2
         Me.ButtonSupp.Text = "Suppression"
         Me.ButtonSupp.UseVisualStyleBackColor = True
@@ -67,59 +67,59 @@ Partial Class FormAccueil
         'LabelAccueil
         '
         Me.LabelAccueil.AutoSize = True
-        Me.LabelAccueil.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAccueil.Location = New System.Drawing.Point(291, 42)
+        Me.LabelAccueil.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.8!)
+        Me.LabelAccueil.Location = New System.Drawing.Point(263, 27)
         Me.LabelAccueil.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LabelAccueil.Name = "LabelAccueil"
-        Me.LabelAccueil.Size = New System.Drawing.Size(128, 39)
+        Me.LabelAccueil.Size = New System.Drawing.Size(163, 51)
         Me.LabelAccueil.TabIndex = 3
         Me.LabelAccueil.Text = "Accueil"
         '
         'ButtonEtat
         '
         Me.ButtonEtat.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonEtat.Location = New System.Drawing.Point(68, 242)
+        Me.ButtonEtat.Location = New System.Drawing.Point(69, 216)
         Me.ButtonEtat.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ButtonEtat.Name = "ButtonEtat"
-        Me.ButtonEtat.Size = New System.Drawing.Size(149, 70)
+        Me.ButtonEtat.Size = New System.Drawing.Size(149, 72)
         Me.ButtonEtat.TabIndex = 4
         Me.ButtonEtat.Text = "Etat Actuel"
         Me.ButtonEtat.UseVisualStyleBackColor = True
         '
-        'BilanProv
+        'ButtonBilanProv
         '
-        Me.BilanProv.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BilanProv.Location = New System.Drawing.Point(284, 242)
-        Me.BilanProv.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
-        Me.BilanProv.Name = "BilanProv"
-        Me.BilanProv.Size = New System.Drawing.Size(149, 71)
-        Me.BilanProv.TabIndex = 5
-        Me.BilanProv.Text = "Bilan Provisoire"
-        Me.BilanProv.UseVisualStyleBackColor = True
+        Me.ButtonBilanProv.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonBilanProv.Location = New System.Drawing.Point(272, 216)
+        Me.ButtonBilanProv.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.ButtonBilanProv.Name = "ButtonBilanProv"
+        Me.ButtonBilanProv.Size = New System.Drawing.Size(149, 72)
+        Me.ButtonBilanProv.TabIndex = 5
+        Me.ButtonBilanProv.Text = "Bilan Provisoire"
+        Me.ButtonBilanProv.UseVisualStyleBackColor = True
         '
-        'ButtonFinInscription
+        'ButtonFinInscrip
         '
-        Me.ButtonFinInscription.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonFinInscription.Location = New System.Drawing.Point(496, 242)
-        Me.ButtonFinInscription.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
-        Me.ButtonFinInscription.Name = "ButtonFinInscription"
-        Me.ButtonFinInscription.Size = New System.Drawing.Size(149, 72)
-        Me.ButtonFinInscription.TabIndex = 6
-        Me.ButtonFinInscription.Text = "Fin Inscription"
-        Me.ButtonFinInscription.UseVisualStyleBackColor = True
+        Me.ButtonFinInscrip.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonFinInscrip.Location = New System.Drawing.Point(471, 216)
+        Me.ButtonFinInscrip.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.ButtonFinInscrip.Name = "ButtonFinInscrip"
+        Me.ButtonFinInscrip.Size = New System.Drawing.Size(149, 72)
+        Me.ButtonFinInscrip.TabIndex = 6
+        Me.ButtonFinInscrip.Text = "Fin Inscription"
+        Me.ButtonFinInscrip.UseVisualStyleBackColor = True
         '
         'FormAccueil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(725, 369)
-        Me.Controls.Add(Me.ButtonFinInscription)
-        Me.Controls.Add(Me.BilanProv)
+        Me.ClientSize = New System.Drawing.Size(693, 324)
+        Me.Controls.Add(Me.ButtonFinInscrip)
+        Me.Controls.Add(Me.ButtonBilanProv)
         Me.Controls.Add(Me.ButtonEtat)
         Me.Controls.Add(Me.LabelAccueil)
         Me.Controls.Add(Me.ButtonSupp)
         Me.Controls.Add(Me.ButtonModif)
-        Me.Controls.Add(Me.ButtonInscription)
+        Me.Controls.Add(Me.ButtonInscrip)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(2, 4, 2, 4)
         Me.Name = "FormAccueil"
@@ -129,11 +129,11 @@ Partial Class FormAccueil
 
     End Sub
 
-    Friend WithEvents ButtonInscription As Button
+    Friend WithEvents ButtonInscrip As Button
     Friend WithEvents ButtonModif As Button
     Friend WithEvents ButtonSupp As Button
     Friend WithEvents LabelAccueil As Label
     Friend WithEvents ButtonEtat As Button
-    Friend WithEvents BilanProv As Button
-    Friend WithEvents ButtonFinInscription As Button
+    Friend WithEvents ButtonBilanProv As Button
+    Friend WithEvents ButtonFinInscrip As Button
 End Class

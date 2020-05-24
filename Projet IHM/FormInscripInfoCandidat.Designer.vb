@@ -46,10 +46,10 @@ Partial Class FormInscripInfoCandidat
         '
         Me.LabelTitre.AutoSize = True
         Me.LabelTitre.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelTitre.Location = New System.Drawing.Point(207, 54)
+        Me.LabelTitre.Location = New System.Drawing.Point(228, 53)
         Me.LabelTitre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelTitre.Name = "LabelTitre"
-        Me.LabelTitre.Size = New System.Drawing.Size(466, 39)
+        Me.LabelTitre.Size = New System.Drawing.Size(446, 38)
         Me.LabelTitre.TabIndex = 0
         Me.LabelTitre.Text = "Renseignements du Candidat"
         '
@@ -238,7 +238,7 @@ Partial Class FormInscripInfoCandidat
         Me.Controls.Add(Me.LabelNom)
         Me.Controls.Add(Me.LabelTitre)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FormInscripInfoCandidat"
         Me.Text = "Formulaire d'inscription : Renseignements du candidat"
         Me.ResumeLayout(False)

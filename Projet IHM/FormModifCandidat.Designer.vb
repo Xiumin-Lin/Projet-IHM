@@ -52,9 +52,9 @@ Partial Class FormModifCandidat
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(174, 26)
+        Me.Label1.Location = New System.Drawing.Point(183, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(199, 39)
+        Me.Label1.Size = New System.Drawing.Size(190, 38)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Modification"
         '
@@ -105,7 +105,7 @@ Partial Class FormModifCandidat
         '
         'ButtonValider
         '
-        Me.ButtonValider.Location = New System.Drawing.Point(345, 325)
+        Me.ButtonValider.Location = New System.Drawing.Point(338, 325)
         Me.ButtonValider.Name = "ButtonValider"
         Me.ButtonValider.Size = New System.Drawing.Size(112, 45)
         Me.ButtonValider.TabIndex = 8
@@ -127,7 +127,7 @@ Partial Class FormModifCandidat
         Me.Controls.Add(Me.TextBoxNumCand)
         Me.Controls.Add(Me.ComboBoxIdCand)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FormModifCandidat"
         Me.Text = "Modification d'un candidat"
         Me.ResumeLayout(False)

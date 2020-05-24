@@ -88,40 +88,52 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="FormBilan.Designer.vb">
+      <DependentUpon>FormBilan.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="FormBilan.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="FormEtat.Designer.vb">
+      <DependentUpon>FormEtat.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="FormEtat.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.vb">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <Compile Include="FormAccueil.Designer.vb">
+      <DependentUpon>FormAccueil.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form3.vb">
+    <Compile Include="FormAccueil.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.vb">
-      <DependentUpon>Form4.vb</DependentUpon>
+    <Compile Include="FormInscripInfoCandidat.Designer.vb">
+      <DependentUpon>FormInscripInfoCandidat.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form4.vb">
+    <Compile Include="FormInscripInfoCandidat.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.vb">
-      <DependentUpon>Form5.vb</DependentUpon>
+    <Compile Include="FormInscripChoixEpreuves.Designer.vb">
+      <DependentUpon>FormInscripChoixEpreuves.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form5.vb">
+    <Compile Include="FormInscripChoixEpreuves.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6.Designer.vb">
-      <DependentUpon>Form6.vb</DependentUpon>
+    <Compile Include="FormRecap.Designer.vb">
+      <DependentUpon>FormRecap.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form6.vb">
+    <Compile Include="FormRecap.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifCandidat.Designer.vb">
+      <DependentUpon>FormModifCandidat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormModifCandidat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuppCandidat.Designer.vb">
+      <DependentUpon>FormSuppCandidat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSuppCandidat.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -141,23 +153,29 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="FormAccueil.resx">
+      <DependentUpon>FormAccueil.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <EmbeddedResource Include="FormBilan.resx">
+      <DependentUpon>FormBilan.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <EmbeddedResource Include="FormEtat.resx">
+      <DependentUpon>FormEtat.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.vb</DependentUpon>
+    <EmbeddedResource Include="FormInscripInfoCandidat.resx">
+      <DependentUpon>FormInscripInfoCandidat.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.vb</DependentUpon>
+    <EmbeddedResource Include="FormInscripChoixEpreuves.resx">
+      <DependentUpon>FormInscripChoixEpreuves.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.vb</DependentUpon>
+    <EmbeddedResource Include="FormRecap.resx">
+      <DependentUpon>FormRecap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModifCandidat.resx">
+      <DependentUpon>FormModifCandidat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuppCandidat.resx">
+      <DependentUpon>FormSuppCandidat.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
