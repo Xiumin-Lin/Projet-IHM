@@ -10,7 +10,7 @@
             .ButtonModif.Visible = False
             .ButtonValider.Visible = False
             .ButtonSupp.Visible = True
-            .ButtonBack.Visible = False
+            .ButtonClose.Visible = False
             .Show()
         End With
         Me.Close()

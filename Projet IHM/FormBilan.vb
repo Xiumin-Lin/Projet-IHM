@@ -10,7 +10,7 @@
             .ButtonModif.Visible = False
             .ButtonValider.Visible = False
             .ButtonSupp.Visible = False
-            .ButtonBack.Visible = True
+            .ButtonClose.Visible = True
         End With
         FormRecap.Show()
     End Sub
@@ -18,5 +18,9 @@
     Private Sub ButtonCloseApp_Click(sender As Object, e As EventArgs) Handles ButtonCloseApp.Click
         Me.Close()
         FormAccueil.Close()
+    End Sub
+
+    Private Sub ButtonShowMatiere_Click(sender As Object, e As EventArgs) Handles ButtonShowMatiere.Click
+        FormBilanMatiere.Show()
     End Sub
 End Class

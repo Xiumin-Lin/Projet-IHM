@@ -45,7 +45,7 @@ Partial Class FormAccueil
         'ButtonModif
         '
         Me.ButtonModif.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonModif.Location = New System.Drawing.Point(272, 114)
+        Me.ButtonModif.Location = New System.Drawing.Point(260, 114)
         Me.ButtonModif.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ButtonModif.Name = "ButtonModif"
         Me.ButtonModif.Size = New System.Drawing.Size(149, 71)
@@ -56,7 +56,7 @@ Partial Class FormAccueil
         'ButtonSupp
         '
         Me.ButtonSupp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonSupp.Location = New System.Drawing.Point(471, 114)
+        Me.ButtonSupp.Location = New System.Drawing.Point(456, 114)
         Me.ButtonSupp.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ButtonSupp.Name = "ButtonSupp"
         Me.ButtonSupp.Size = New System.Drawing.Size(149, 71)
@@ -66,14 +66,17 @@ Partial Class FormAccueil
         '
         'LabelAccueil
         '
-        Me.LabelAccueil.AutoSize = True
+        Me.LabelAccueil.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelAccueil.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.8!)
-        Me.LabelAccueil.Location = New System.Drawing.Point(263, 27)
+        Me.LabelAccueil.Location = New System.Drawing.Point(11, 29)
         Me.LabelAccueil.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LabelAccueil.Name = "LabelAccueil"
-        Me.LabelAccueil.Size = New System.Drawing.Size(163, 51)
+        Me.LabelAccueil.Size = New System.Drawing.Size(658, 51)
         Me.LabelAccueil.TabIndex = 3
         Me.LabelAccueil.Text = "Accueil"
+        Me.LabelAccueil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ButtonEtat
         '
@@ -89,7 +92,7 @@ Partial Class FormAccueil
         'ButtonBilanProv
         '
         Me.ButtonBilanProv.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonBilanProv.Location = New System.Drawing.Point(272, 216)
+        Me.ButtonBilanProv.Location = New System.Drawing.Point(260, 216)
         Me.ButtonBilanProv.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ButtonBilanProv.Name = "ButtonBilanProv"
         Me.ButtonBilanProv.Size = New System.Drawing.Size(149, 72)
@@ -100,7 +103,7 @@ Partial Class FormAccueil
         'ButtonFinInscrip
         '
         Me.ButtonFinInscrip.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonFinInscrip.Location = New System.Drawing.Point(471, 216)
+        Me.ButtonFinInscrip.Location = New System.Drawing.Point(456, 216)
         Me.ButtonFinInscrip.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.ButtonFinInscrip.Name = "ButtonFinInscrip"
         Me.ButtonFinInscrip.Size = New System.Drawing.Size(149, 72)
@@ -112,7 +115,7 @@ Partial Class FormAccueil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(693, 324)
+        Me.ClientSize = New System.Drawing.Size(680, 324)
         Me.Controls.Add(Me.ButtonFinInscrip)
         Me.Controls.Add(Me.ButtonBilanProv)
         Me.Controls.Add(Me.ButtonEtat)
@@ -125,7 +128,6 @@ Partial Class FormAccueil
         Me.Name = "FormAccueil"
         Me.Text = "Accueil"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 

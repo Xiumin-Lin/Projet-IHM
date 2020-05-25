@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2075E26F-D19C-4761-9D87-FE7C688E5E36}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Projet_IHM.My.MyApplication</StartupObject>
+    <StartupObject>Sub Main</StartupObject>
     <RootNamespace>Projet_IHM</RootNamespace>
     <AssemblyName>Projet IHM</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -88,6 +88,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBilanMatiere.Designer.vb">
+      <DependentUpon>FormBilanMatiere.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBilanMatiere.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormBilan.Designer.vb">
       <DependentUpon>FormBilan.vb</DependentUpon>
     </Compile>
@@ -136,10 +142,12 @@
     <Compile Include="FormSuppCandidat.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ModuleProjetIHM.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -158,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBilan.resx">
       <DependentUpon>FormBilan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBilanMatiere.resx">
+      <DependentUpon>FormBilanMatiere.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEtat.resx">
       <DependentUpon>FormEtat.vb</DependentUpon>

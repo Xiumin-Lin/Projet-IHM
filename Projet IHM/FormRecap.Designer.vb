@@ -51,7 +51,7 @@ Partial Class FormRecap
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.LabelEOF = New System.Windows.Forms.Label()
         Me.ButtonSupp = New System.Windows.Forms.Button()
-        Me.ButtonBack = New System.Windows.Forms.Button()
+        Me.ButtonClose = New System.Windows.Forms.Button()
         Me.GroupBoxInfoCandidat.SuspendLayout()
         Me.GroupBoxInfoEEcrites.SuspendLayout()
         Me.GroupBoxInfoEOrales.SuspendLayout()
@@ -60,14 +60,17 @@ Partial Class FormRecap
         '
         'LabelRecap
         '
-        Me.LabelRecap.AutoSize = True
+        Me.LabelRecap.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelRecap.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelRecap.Location = New System.Drawing.Point(225, 33)
+        Me.LabelRecap.Location = New System.Drawing.Point(13, 9)
         Me.LabelRecap.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelRecap.Name = "LabelRecap"
-        Me.LabelRecap.Size = New System.Drawing.Size(380, 38)
+        Me.LabelRecap.Size = New System.Drawing.Size(800, 80)
         Me.LabelRecap.TabIndex = 0
         Me.LabelRecap.Text = "Récapitulatif du Candidat"
+        Me.LabelRecap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ButtonValider
         '
@@ -385,23 +388,23 @@ Partial Class FormRecap
         Me.ButtonSupp.UseVisualStyleBackColor = True
         Me.ButtonSupp.Visible = False
         '
-        'ButtonBack
+        'ButtonClose
         '
-        Me.ButtonBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonBack.Location = New System.Drawing.Point(351, 450)
-        Me.ButtonBack.Margin = New System.Windows.Forms.Padding(4)
-        Me.ButtonBack.Name = "ButtonBack"
-        Me.ButtonBack.Size = New System.Drawing.Size(133, 68)
-        Me.ButtonBack.TabIndex = 9
-        Me.ButtonBack.Text = "Fermer"
-        Me.ButtonBack.UseVisualStyleBackColor = True
-        Me.ButtonBack.Visible = False
+        Me.ButtonClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonClose.Location = New System.Drawing.Point(351, 450)
+        Me.ButtonClose.Margin = New System.Windows.Forms.Padding(4)
+        Me.ButtonClose.Name = "ButtonClose"
+        Me.ButtonClose.Size = New System.Drawing.Size(133, 68)
+        Me.ButtonClose.TabIndex = 9
+        Me.ButtonClose.Text = "Fermer"
+        Me.ButtonClose.UseVisualStyleBackColor = True
+        Me.ButtonClose.Visible = False
         '
         'FormRecap
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(842, 551)
+        Me.ClientSize = New System.Drawing.Size(826, 543)
         Me.Controls.Add(Me.ButtonSupp)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBoxInfoEOrales)
@@ -411,7 +414,7 @@ Partial Class FormRecap
         Me.Controls.Add(Me.ButtonAnnuler)
         Me.Controls.Add(Me.ButtonValider)
         Me.Controls.Add(Me.LabelRecap)
-        Me.Controls.Add(Me.ButtonBack)
+        Me.Controls.Add(Me.ButtonClose)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FormRecap"
@@ -425,7 +428,6 @@ Partial Class FormRecap
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -458,5 +460,5 @@ Partial Class FormRecap
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents LabelEOF As Label
     Friend WithEvents ButtonSupp As Button
-    Friend WithEvents ButtonBack As Button
+    Friend WithEvents ButtonClose As Button
 End Class

@@ -80,7 +80,7 @@ Partial Class FormInscripChoixEpreuves
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(347, 43)
+        Me.Label1.Location = New System.Drawing.Point(358, 44)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(311, 38)
@@ -102,13 +102,13 @@ Partial Class FormInscripChoixEpreuves
         Me.ComboBoxRegion.FormattingEnabled = True
         Me.ComboBoxRegion.Location = New System.Drawing.Point(436, 101)
         Me.ComboBoxRegion.Name = "ComboBoxRegion"
-        Me.ComboBoxRegion.Size = New System.Drawing.Size(224, 28)
+        Me.ComboBoxRegion.Size = New System.Drawing.Size(233, 28)
         Me.ComboBoxRegion.TabIndex = 4
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(358, 104)
+        Me.Label3.Location = New System.Drawing.Point(361, 104)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(71, 20)
@@ -389,7 +389,7 @@ Partial Class FormInscripChoixEpreuves
         'RadioButtonNon
         '
         Me.RadioButtonNon.AutoSize = True
-        Me.RadioButtonNon.Location = New System.Drawing.Point(49, 122)
+        Me.RadioButtonNon.Location = New System.Drawing.Point(45, 121)
         Me.RadioButtonNon.Name = "RadioButtonNon"
         Me.RadioButtonNon.Size = New System.Drawing.Size(60, 24)
         Me.RadioButtonNon.TabIndex = 3
@@ -452,7 +452,7 @@ Partial Class FormInscripChoixEpreuves
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1017, 619)
+        Me.ClientSize = New System.Drawing.Size(1017, 598)
         Me.Controls.Add(Me.ButtonValidChoixEp)
         Me.Controls.Add(Me.ButtonAnnuler)
         Me.Controls.Add(Me.GroupBoxOral)

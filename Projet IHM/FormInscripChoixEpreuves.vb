@@ -12,7 +12,7 @@
             .ButtonModif.Visible = True
             .ButtonValider.Visible = True
             .ButtonSupp.Visible = False
-            .ButtonBack.Visible = False
+            .ButtonClose.Visible = False
         End With
         Me.Hide()
         FormRecap.Show()
