@@ -24,10 +24,10 @@ Partial Class FormInscripChoixEpreuves
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.LabelNom = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LabelTitre = New System.Windows.Forms.Label()
         Me.LabelPrenom = New System.Windows.Forms.Label()
         Me.ComboBoxRegion = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.LabelRegion = New System.Windows.Forms.Label()
         Me.GroupBoxCandidat = New System.Windows.Forms.GroupBox()
         Me.GroupBoxEcrit = New System.Windows.Forms.GroupBox()
         Me.CheckBoxMaths = New System.Windows.Forms.CheckBox()
@@ -76,16 +76,16 @@ Partial Class FormInscripChoixEpreuves
         Me.LabelNom.TabIndex = 0
         Me.LabelNom.Text = "Nom"
         '
-        'Label1
+        'LabelTitre
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(358, 44)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(311, 38)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Choix des Epreuves"
+        Me.LabelTitre.AutoSize = True
+        Me.LabelTitre.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTitre.Location = New System.Drawing.Point(358, 44)
+        Me.LabelTitre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LabelTitre.Name = "LabelTitre"
+        Me.LabelTitre.Size = New System.Drawing.Size(311, 38)
+        Me.LabelTitre.TabIndex = 1
+        Me.LabelTitre.Text = "Choix des Epreuves"
         '
         'LabelPrenom
         '
@@ -105,15 +105,15 @@ Partial Class FormInscripChoixEpreuves
         Me.ComboBoxRegion.Size = New System.Drawing.Size(233, 28)
         Me.ComboBoxRegion.TabIndex = 4
         '
-        'Label3
+        'LabelRegion
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(361, 104)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(71, 20)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Région :"
+        Me.LabelRegion.AutoSize = True
+        Me.LabelRegion.Location = New System.Drawing.Point(361, 104)
+        Me.LabelRegion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LabelRegion.Name = "LabelRegion"
+        Me.LabelRegion.Size = New System.Drawing.Size(71, 20)
+        Me.LabelRegion.TabIndex = 3
+        Me.LabelRegion.Text = "Région :"
         '
         'GroupBoxCandidat
         '
@@ -121,7 +121,7 @@ Partial Class FormInscripChoixEpreuves
         Me.GroupBoxCandidat.Controls.Add(Me.LabelPrenom)
         Me.GroupBoxCandidat.Location = New System.Drawing.Point(30, 29)
         Me.GroupBoxCandidat.Name = "GroupBoxCandidat"
-        Me.GroupBoxCandidat.Size = New System.Drawing.Size(213, 100)
+        Me.GroupBoxCandidat.Size = New System.Drawing.Size(228, 100)
         Me.GroupBoxCandidat.TabIndex = 5
         Me.GroupBoxCandidat.TabStop = False
         Me.GroupBoxCandidat.Text = "Candidat"
@@ -389,7 +389,7 @@ Partial Class FormInscripChoixEpreuves
         'RadioButtonNon
         '
         Me.RadioButtonNon.AutoSize = True
-        Me.RadioButtonNon.Location = New System.Drawing.Point(45, 121)
+        Me.RadioButtonNon.Location = New System.Drawing.Point(49, 121)
         Me.RadioButtonNon.Name = "RadioButtonNon"
         Me.RadioButtonNon.Size = New System.Drawing.Size(60, 24)
         Me.RadioButtonNon.TabIndex = 3
@@ -422,7 +422,6 @@ Partial Class FormInscripChoixEpreuves
         Me.GroupBoxEFacultative.Controls.Add(Me.ComboBoxEFacultative)
         Me.GroupBoxEFacultative.Controls.Add(Me.RadioButtonNon)
         Me.GroupBoxEFacultative.Controls.Add(Me.RadioButtonYes)
-        Me.GroupBoxEFacultative.Enabled = False
         Me.GroupBoxEFacultative.Location = New System.Drawing.Point(560, 338)
         Me.GroupBoxEFacultative.Name = "GroupBoxEFacultative"
         Me.GroupBoxEFacultative.Size = New System.Drawing.Size(411, 165)
@@ -459,9 +458,9 @@ Partial Class FormInscripChoixEpreuves
         Me.Controls.Add(Me.GroupBoxEFacultative)
         Me.Controls.Add(Me.GroupBoxEcrit)
         Me.Controls.Add(Me.GroupBoxCandidat)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.LabelRegion)
         Me.Controls.Add(Me.ComboBoxRegion)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.LabelTitre)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FormInscripChoixEpreuves"
@@ -480,10 +479,10 @@ Partial Class FormInscripChoixEpreuves
     End Sub
 
     Friend WithEvents LabelNom As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents LabelTitre As Label
     Friend WithEvents LabelPrenom As Label
     Friend WithEvents ComboBoxRegion As ComboBox
-    Friend WithEvents Label3 As Label
+    Friend WithEvents LabelRegion As Label
     Friend WithEvents GroupBoxCandidat As GroupBox
     Friend WithEvents GroupBoxEcrit As GroupBox
     Friend WithEvents GroupBoxOral As GroupBox

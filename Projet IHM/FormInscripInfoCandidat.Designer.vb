@@ -35,8 +35,8 @@ Partial Class FormInscripInfoCandidat
         Me.TextBoxCP = New System.Windows.Forms.TextBox()
         Me.LabelInfoAge = New System.Windows.Forms.Label()
         Me.HScrollBar1 = New System.Windows.Forms.HScrollBar()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.LabelVille = New System.Windows.Forms.Label()
+        Me.TextBoxVille = New System.Windows.Forms.TextBox()
         Me.ButtonAbandon = New System.Windows.Forms.Button()
         Me.ButtonSuivant = New System.Windows.Forms.Button()
         Me.Timer1min = New System.Windows.Forms.Timer(Me.components)
@@ -53,7 +53,7 @@ Partial Class FormInscripInfoCandidat
         Me.LabelTitre.Location = New System.Drawing.Point(13, 24)
         Me.LabelTitre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelTitre.Name = "LabelTitre"
-        Me.LabelTitre.Size = New System.Drawing.Size(825, 56)
+        Me.LabelTitre.Size = New System.Drawing.Size(766, 46)
         Me.LabelTitre.TabIndex = 0
         Me.LabelTitre.Text = "Renseignements du Candidat"
         Me.LabelTitre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -77,7 +77,7 @@ Partial Class FormInscripInfoCandidat
         Me.TextBoxNom.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.TextBoxNom.MaxLength = 15
         Me.TextBoxNom.Name = "TextBoxNom"
-        Me.TextBoxNom.Size = New System.Drawing.Size(260, 27)
+        Me.TextBoxNom.Size = New System.Drawing.Size(245, 27)
         Me.TextBoxNom.TabIndex = 2
         '
         'LabelPrenom
@@ -96,7 +96,7 @@ Partial Class FormInscripInfoCandidat
         '
         Me.LabelAdresse.AutoSize = True
         Me.LabelAdresse.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAdresse.Location = New System.Drawing.Point(437, 107)
+        Me.LabelAdresse.Location = New System.Drawing.Point(385, 107)
         Me.LabelAdresse.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelAdresse.Name = "LabelAdresse"
         Me.LabelAdresse.Size = New System.Drawing.Size(81, 20)
@@ -108,7 +108,7 @@ Partial Class FormInscripInfoCandidat
         '
         Me.LabelCP.AutoSize = True
         Me.LabelCP.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelCP.Location = New System.Drawing.Point(437, 156)
+        Me.LabelCP.Location = New System.Drawing.Point(385, 156)
         Me.LabelCP.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelCP.Name = "LabelCP"
         Me.LabelCP.Size = New System.Drawing.Size(110, 20)
@@ -135,13 +135,13 @@ Partial Class FormInscripInfoCandidat
         Me.TextBoxPrenom.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.TextBoxPrenom.MaxLength = 20
         Me.TextBoxPrenom.Name = "TextBoxPrenom"
-        Me.TextBoxPrenom.Size = New System.Drawing.Size(260, 27)
+        Me.TextBoxPrenom.Size = New System.Drawing.Size(245, 27)
         Me.TextBoxPrenom.TabIndex = 4
         '
         'TextBoxAdresse
         '
         Me.TextBoxAdresse.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxAdresse.Location = New System.Drawing.Point(558, 105)
+        Me.TextBoxAdresse.Location = New System.Drawing.Point(506, 105)
         Me.TextBoxAdresse.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.TextBoxAdresse.MaxLength = 30
         Me.TextBoxAdresse.Name = "TextBoxAdresse"
@@ -151,9 +151,9 @@ Partial Class FormInscripInfoCandidat
         'TextBoxCP
         '
         Me.TextBoxCP.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxCP.Location = New System.Drawing.Point(558, 153)
+        Me.TextBoxCP.Location = New System.Drawing.Point(506, 153)
         Me.TextBoxCP.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.TextBoxCP.MaxLength = 11
+        Me.TextBoxCP.MaxLength = 5
         Me.TextBoxCP.Name = "TextBoxCP"
         Me.TextBoxCP.Size = New System.Drawing.Size(260, 27)
         Me.TextBoxCP.TabIndex = 10
@@ -172,37 +172,41 @@ Partial Class FormInscripInfoCandidat
         '
         'HScrollBar1
         '
-        Me.HScrollBar1.Location = New System.Drawing.Point(32, 272)
+        Me.HScrollBar1.LargeChange = 1
+        Me.HScrollBar1.Location = New System.Drawing.Point(91, 262)
+        Me.HScrollBar1.Maximum = 55
+        Me.HScrollBar1.Minimum = 18
         Me.HScrollBar1.Name = "HScrollBar1"
-        Me.HScrollBar1.Size = New System.Drawing.Size(411, 32)
+        Me.HScrollBar1.Size = New System.Drawing.Size(615, 31)
         Me.HScrollBar1.TabIndex = 7
+        Me.HScrollBar1.Value = 18
         '
-        'Label1
+        'LabelVille
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(437, 201)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 20)
-        Me.Label1.TabIndex = 12
-        Me.Label1.Text = "Ville :"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelVille.AutoSize = True
+        Me.LabelVille.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelVille.Location = New System.Drawing.Point(385, 201)
+        Me.LabelVille.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LabelVille.Name = "LabelVille"
+        Me.LabelVille.Size = New System.Drawing.Size(51, 20)
+        Me.LabelVille.TabIndex = 12
+        Me.LabelVille.Text = "Ville :"
+        Me.LabelVille.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox1
+        'TextBoxVille
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(558, 198)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.TextBox1.MaxLength = 15
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(260, 27)
-        Me.TextBox1.TabIndex = 13
+        Me.TextBoxVille.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxVille.Location = New System.Drawing.Point(506, 198)
+        Me.TextBoxVille.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.TextBoxVille.MaxLength = 15
+        Me.TextBoxVille.Name = "TextBoxVille"
+        Me.TextBoxVille.Size = New System.Drawing.Size(260, 27)
+        Me.TextBoxVille.TabIndex = 13
         '
         'ButtonAbandon
         '
         Me.ButtonAbandon.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonAbandon.Location = New System.Drawing.Point(222, 340)
+        Me.ButtonAbandon.Location = New System.Drawing.Point(207, 325)
         Me.ButtonAbandon.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.ButtonAbandon.Name = "ButtonAbandon"
         Me.ButtonAbandon.Size = New System.Drawing.Size(151, 54)
@@ -213,7 +217,7 @@ Partial Class FormInscripInfoCandidat
         'ButtonSuivant
         '
         Me.ButtonSuivant.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonSuivant.Location = New System.Drawing.Point(492, 340)
+        Me.ButtonSuivant.Location = New System.Drawing.Point(477, 325)
         Me.ButtonSuivant.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.ButtonSuivant.Name = "ButtonSuivant"
         Me.ButtonSuivant.Size = New System.Drawing.Size(151, 54)
@@ -221,11 +225,14 @@ Partial Class FormInscripInfoCandidat
         Me.ButtonSuivant.Text = "Suivant"
         Me.ButtonSuivant.UseVisualStyleBackColor = True
         '
+        'Timer1min
+        '
+        '
         'LabelAgeMin
         '
         Me.LabelAgeMin.AutoSize = True
         Me.LabelAgeMin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAgeMin.Location = New System.Drawing.Point(28, 252)
+        Me.LabelAgeMin.Location = New System.Drawing.Point(22, 262)
         Me.LabelAgeMin.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelAgeMin.Name = "LabelAgeMin"
         Me.LabelAgeMin.Size = New System.Drawing.Size(65, 20)
@@ -237,7 +244,7 @@ Partial Class FormInscripInfoCandidat
         '
         Me.LabelAgeMax.AutoSize = True
         Me.LabelAgeMax.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAgeMax.Location = New System.Drawing.Point(374, 252)
+        Me.LabelAgeMax.Location = New System.Drawing.Point(710, 262)
         Me.LabelAgeMax.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelAgeMax.Name = "LabelAgeMax"
         Me.LabelAgeMax.Size = New System.Drawing.Size(69, 20)
@@ -249,13 +256,13 @@ Partial Class FormInscripInfoCandidat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(851, 418)
+        Me.ClientSize = New System.Drawing.Size(792, 408)
         Me.Controls.Add(Me.LabelAgeMax)
         Me.Controls.Add(Me.LabelAgeMin)
         Me.Controls.Add(Me.ButtonSuivant)
         Me.Controls.Add(Me.ButtonAbandon)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TextBoxVille)
+        Me.Controls.Add(Me.LabelVille)
         Me.Controls.Add(Me.HScrollBar1)
         Me.Controls.Add(Me.LabelInfoAge)
         Me.Controls.Add(Me.TextBoxCP)
@@ -289,8 +296,8 @@ Partial Class FormInscripInfoCandidat
     Friend WithEvents TextBoxCP As TextBox
     Friend WithEvents LabelInfoAge As Label
     Friend WithEvents HScrollBar1 As HScrollBar
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents LabelVille As Label
+    Friend WithEvents TextBoxVille As TextBox
     Friend WithEvents ButtonAbandon As Button
     Friend WithEvents ButtonSuivant As Button
     Friend WithEvents Timer1min As Timer
