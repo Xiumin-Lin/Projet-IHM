@@ -217,7 +217,7 @@ Partial Class FormInscripInfoCandidat
         'ButtonSuivant
         '
         Me.ButtonSuivant.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonSuivant.Location = New System.Drawing.Point(477, 325)
+        Me.ButtonSuivant.Location = New System.Drawing.Point(475, 325)
         Me.ButtonSuivant.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.ButtonSuivant.Name = "ButtonSuivant"
         Me.ButtonSuivant.Size = New System.Drawing.Size(151, 54)

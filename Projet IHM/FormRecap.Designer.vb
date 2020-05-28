@@ -48,14 +48,18 @@ Partial Class FormRecap
         Me.LabelEO3 = New System.Windows.Forms.Label()
         Me.LabelEO2 = New System.Windows.Forms.Label()
         Me.LabelEO1 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBoxInfoEOF = New System.Windows.Forms.GroupBox()
         Me.LabelEOF = New System.Windows.Forms.Label()
         Me.ButtonSupp = New System.Windows.Forms.Button()
         Me.ButtonClose = New System.Windows.Forms.Button()
+        Me.LabelInfoRegion = New System.Windows.Forms.Label()
+        Me.LabelRegion = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBoxInfoCandidat.SuspendLayout()
         Me.GroupBoxInfoEEcrites.SuspendLayout()
         Me.GroupBoxInfoEOrales.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.GroupBoxInfoEOF.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'LabelRecap
@@ -64,10 +68,10 @@ Partial Class FormRecap
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelRecap.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelRecap.Location = New System.Drawing.Point(13, 9)
+        Me.LabelRecap.Location = New System.Drawing.Point(186, 27)
         Me.LabelRecap.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelRecap.Name = "LabelRecap"
-        Me.LabelRecap.Size = New System.Drawing.Size(800, 80)
+        Me.LabelRecap.Size = New System.Drawing.Size(409, 42)
         Me.LabelRecap.TabIndex = 0
         Me.LabelRecap.Text = "Récapitulatif du Candidat"
         Me.LabelRecap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -75,7 +79,7 @@ Partial Class FormRecap
         'ButtonValider
         '
         Me.ButtonValider.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonValider.Location = New System.Drawing.Point(443, 450)
+        Me.ButtonValider.Location = New System.Drawing.Point(442, 497)
         Me.ButtonValider.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonValider.Name = "ButtonValider"
         Me.ButtonValider.Size = New System.Drawing.Size(133, 68)
@@ -86,7 +90,7 @@ Partial Class FormRecap
         'ButtonAnnuler
         '
         Me.ButtonAnnuler.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonAnnuler.Location = New System.Drawing.Point(78, 450)
+        Me.ButtonAnnuler.Location = New System.Drawing.Point(77, 497)
         Me.ButtonAnnuler.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonAnnuler.Name = "ButtonAnnuler"
         Me.ButtonAnnuler.Size = New System.Drawing.Size(133, 68)
@@ -97,7 +101,7 @@ Partial Class FormRecap
         'ButtonModif
         '
         Me.ButtonModif.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonModif.Location = New System.Drawing.Point(263, 450)
+        Me.ButtonModif.Location = New System.Drawing.Point(262, 497)
         Me.ButtonModif.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonModif.Name = "ButtonModif"
         Me.ButtonModif.Size = New System.Drawing.Size(133, 68)
@@ -121,7 +125,7 @@ Partial Class FormRecap
         '
         Me.LabelVille.AutoSize = True
         Me.LabelVille.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelVille.Location = New System.Drawing.Point(23, 271)
+        Me.LabelVille.Location = New System.Drawing.Point(21, 270)
         Me.LabelVille.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelVille.Name = "LabelVille"
         Me.LabelVille.Size = New System.Drawing.Size(51, 20)
@@ -133,7 +137,7 @@ Partial Class FormRecap
         '
         Me.LabelCP.AutoSize = True
         Me.LabelCP.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelCP.Location = New System.Drawing.Point(23, 224)
+        Me.LabelCP.Location = New System.Drawing.Point(21, 237)
         Me.LabelCP.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelCP.Name = "LabelCP"
         Me.LabelCP.Size = New System.Drawing.Size(110, 20)
@@ -145,7 +149,7 @@ Partial Class FormRecap
         '
         Me.LabelAdresse.AutoSize = True
         Me.LabelAdresse.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAdresse.Location = New System.Drawing.Point(21, 143)
+        Me.LabelAdresse.Location = New System.Drawing.Point(21, 152)
         Me.LabelAdresse.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelAdresse.Name = "LabelAdresse"
         Me.LabelAdresse.Size = New System.Drawing.Size(81, 20)
@@ -168,11 +172,12 @@ Partial Class FormRecap
         'LabelInfoNom
         '
         Me.LabelInfoNom.AutoSize = True
+        Me.LabelInfoNom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelInfoNom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelInfoNom.Location = New System.Drawing.Point(110, 40)
         Me.LabelInfoNom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelInfoNom.Name = "LabelInfoNom"
-        Me.LabelInfoNom.Size = New System.Drawing.Size(44, 20)
+        Me.LabelInfoNom.Size = New System.Drawing.Size(46, 22)
         Me.LabelInfoNom.TabIndex = 10
         Me.LabelInfoNom.Text = "Nom"
         Me.LabelInfoNom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -180,33 +185,36 @@ Partial Class FormRecap
         'LabelInfoPrenom
         '
         Me.LabelInfoPrenom.AutoSize = True
+        Me.LabelInfoPrenom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelInfoPrenom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelInfoPrenom.Location = New System.Drawing.Point(110, 72)
         Me.LabelInfoPrenom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelInfoPrenom.Name = "LabelInfoPrenom"
-        Me.LabelInfoPrenom.Size = New System.Drawing.Size(67, 20)
+        Me.LabelInfoPrenom.Size = New System.Drawing.Size(69, 22)
         Me.LabelInfoPrenom.TabIndex = 11
         Me.LabelInfoPrenom.Text = "Prénom"
         Me.LabelInfoPrenom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LabelInfoAdresse
         '
+        Me.LabelInfoAdresse.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelInfoAdresse.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelInfoAdresse.Location = New System.Drawing.Point(110, 143)
+        Me.LabelInfoAdresse.Location = New System.Drawing.Point(110, 152)
         Me.LabelInfoAdresse.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelInfoAdresse.Name = "LabelInfoAdresse"
-        Me.LabelInfoAdresse.Size = New System.Drawing.Size(171, 70)
+        Me.LabelInfoAdresse.Size = New System.Drawing.Size(171, 63)
         Me.LabelInfoAdresse.TabIndex = 20
         Me.LabelInfoAdresse.Text = "Adresse"
         '
         'LabelInfoCP
         '
         Me.LabelInfoCP.AutoSize = True
+        Me.LabelInfoCP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelInfoCP.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelInfoCP.Location = New System.Drawing.Point(141, 224)
+        Me.LabelInfoCP.Location = New System.Drawing.Point(141, 237)
         Me.LabelInfoCP.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelInfoCP.Name = "LabelInfoCP"
-        Me.LabelInfoCP.Size = New System.Drawing.Size(32, 20)
+        Me.LabelInfoCP.Size = New System.Drawing.Size(34, 22)
         Me.LabelInfoCP.TabIndex = 21
         Me.LabelInfoCP.Text = "CP"
         Me.LabelInfoCP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -214,11 +222,12 @@ Partial Class FormRecap
         'LabelInfoVille
         '
         Me.LabelInfoVille.AutoSize = True
+        Me.LabelInfoVille.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelInfoVille.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelInfoVille.Location = New System.Drawing.Point(141, 271)
+        Me.LabelInfoVille.Location = New System.Drawing.Point(141, 270)
         Me.LabelInfoVille.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelInfoVille.Name = "LabelInfoVille"
-        Me.LabelInfoVille.Size = New System.Drawing.Size(41, 20)
+        Me.LabelInfoVille.Size = New System.Drawing.Size(43, 22)
         Me.LabelInfoVille.TabIndex = 22
         Me.LabelInfoVille.Text = "Ville"
         Me.LabelInfoVille.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -226,11 +235,12 @@ Partial Class FormRecap
         'LabelInfoAge
         '
         Me.LabelInfoAge.AutoSize = True
+        Me.LabelInfoAge.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelInfoAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelInfoAge.Location = New System.Drawing.Point(110, 110)
         Me.LabelInfoAge.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelInfoAge.Name = "LabelInfoAge"
-        Me.LabelInfoAge.Size = New System.Drawing.Size(38, 20)
+        Me.LabelInfoAge.Size = New System.Drawing.Size(40, 22)
         Me.LabelInfoAge.TabIndex = 12
         Me.LabelInfoAge.Text = "Age"
         Me.LabelInfoAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -261,9 +271,9 @@ Partial Class FormRecap
         Me.GroupBoxInfoCandidat.Controls.Add(Me.LabelInfoAdresse)
         Me.GroupBoxInfoCandidat.Controls.Add(Me.LabelInfoNom)
         Me.GroupBoxInfoCandidat.Controls.Add(Me.LabelInfoPrenom)
-        Me.GroupBoxInfoCandidat.Location = New System.Drawing.Point(53, 100)
+        Me.GroupBoxInfoCandidat.Location = New System.Drawing.Point(52, 147)
         Me.GroupBoxInfoCandidat.Name = "GroupBoxInfoCandidat"
-        Me.GroupBoxInfoCandidat.Size = New System.Drawing.Size(301, 317)
+        Me.GroupBoxInfoCandidat.Size = New System.Drawing.Size(315, 317)
         Me.GroupBoxInfoCandidat.TabIndex = 1
         Me.GroupBoxInfoCandidat.TabStop = False
         Me.GroupBoxInfoCandidat.Text = "Information"
@@ -274,7 +284,7 @@ Partial Class FormRecap
         Me.GroupBoxInfoEEcrites.Controls.Add(Me.LabelEE3)
         Me.GroupBoxInfoEEcrites.Controls.Add(Me.LabelEE2)
         Me.GroupBoxInfoEEcrites.Controls.Add(Me.LabelEE1)
-        Me.GroupBoxInfoEEcrites.Location = New System.Drawing.Point(404, 100)
+        Me.GroupBoxInfoEEcrites.Location = New System.Drawing.Point(396, 147)
         Me.GroupBoxInfoEEcrites.Name = "GroupBoxInfoEEcrites"
         Me.GroupBoxInfoEEcrites.Size = New System.Drawing.Size(369, 119)
         Me.GroupBoxInfoEEcrites.TabIndex = 2
@@ -284,36 +294,40 @@ Partial Class FormRecap
         'LabelEE4
         '
         Me.LabelEE4.AutoSize = True
+        Me.LabelEE4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelEE4.Location = New System.Drawing.Point(186, 81)
         Me.LabelEE4.Name = "LabelEE4"
-        Me.LabelEE4.Size = New System.Drawing.Size(40, 20)
+        Me.LabelEE4.Size = New System.Drawing.Size(42, 22)
         Me.LabelEE4.TabIndex = 3
         Me.LabelEE4.Text = "EE4"
         '
         'LabelEE3
         '
         Me.LabelEE3.AutoSize = True
+        Me.LabelEE3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelEE3.Location = New System.Drawing.Point(186, 40)
         Me.LabelEE3.Name = "LabelEE3"
-        Me.LabelEE3.Size = New System.Drawing.Size(40, 20)
+        Me.LabelEE3.Size = New System.Drawing.Size(42, 22)
         Me.LabelEE3.TabIndex = 2
         Me.LabelEE3.Text = "EE3"
         '
         'LabelEE2
         '
         Me.LabelEE2.AutoSize = True
+        Me.LabelEE2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelEE2.Location = New System.Drawing.Point(22, 81)
         Me.LabelEE2.Name = "LabelEE2"
-        Me.LabelEE2.Size = New System.Drawing.Size(40, 20)
+        Me.LabelEE2.Size = New System.Drawing.Size(42, 22)
         Me.LabelEE2.TabIndex = 1
         Me.LabelEE2.Text = "EE2"
         '
         'LabelEE1
         '
         Me.LabelEE1.AutoSize = True
+        Me.LabelEE1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelEE1.Location = New System.Drawing.Point(22, 40)
         Me.LabelEE1.Name = "LabelEE1"
-        Me.LabelEE1.Size = New System.Drawing.Size(40, 20)
+        Me.LabelEE1.Size = New System.Drawing.Size(42, 22)
         Me.LabelEE1.TabIndex = 0
         Me.LabelEE1.Text = "EE1"
         '
@@ -322,7 +336,7 @@ Partial Class FormRecap
         Me.GroupBoxInfoEOrales.Controls.Add(Me.LabelEO3)
         Me.GroupBoxInfoEOrales.Controls.Add(Me.LabelEO2)
         Me.GroupBoxInfoEOrales.Controls.Add(Me.LabelEO1)
-        Me.GroupBoxInfoEOrales.Location = New System.Drawing.Point(404, 230)
+        Me.GroupBoxInfoEOrales.Location = New System.Drawing.Point(396, 277)
         Me.GroupBoxInfoEOrales.Name = "GroupBoxInfoEOrales"
         Me.GroupBoxInfoEOrales.Size = New System.Drawing.Size(369, 103)
         Me.GroupBoxInfoEOrales.TabIndex = 3
@@ -332,54 +346,58 @@ Partial Class FormRecap
         'LabelEO3
         '
         Me.LabelEO3.AutoSize = True
+        Me.LabelEO3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelEO3.Location = New System.Drawing.Point(186, 33)
         Me.LabelEO3.Name = "LabelEO3"
-        Me.LabelEO3.Size = New System.Drawing.Size(42, 20)
+        Me.LabelEO3.Size = New System.Drawing.Size(44, 22)
         Me.LabelEO3.TabIndex = 2
         Me.LabelEO3.Text = "EO3"
         '
         'LabelEO2
         '
         Me.LabelEO2.AutoSize = True
+        Me.LabelEO2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelEO2.Location = New System.Drawing.Point(20, 63)
         Me.LabelEO2.Name = "LabelEO2"
-        Me.LabelEO2.Size = New System.Drawing.Size(42, 20)
+        Me.LabelEO2.Size = New System.Drawing.Size(44, 22)
         Me.LabelEO2.TabIndex = 1
         Me.LabelEO2.Text = "EO2"
         '
         'LabelEO1
         '
         Me.LabelEO1.AutoSize = True
+        Me.LabelEO1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelEO1.Location = New System.Drawing.Point(20, 33)
         Me.LabelEO1.Name = "LabelEO1"
-        Me.LabelEO1.Size = New System.Drawing.Size(42, 20)
+        Me.LabelEO1.Size = New System.Drawing.Size(44, 22)
         Me.LabelEO1.TabIndex = 0
         Me.LabelEO1.Text = "EO1"
         '
-        'GroupBox1
+        'GroupBoxInfoEOF
         '
-        Me.GroupBox1.Controls.Add(Me.LabelEOF)
-        Me.GroupBox1.Location = New System.Drawing.Point(404, 345)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(369, 72)
-        Me.GroupBox1.TabIndex = 4
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Epreuve Orale Facultative Sélectionnée"
-        Me.GroupBox1.Visible = False
+        Me.GroupBoxInfoEOF.Controls.Add(Me.LabelEOF)
+        Me.GroupBoxInfoEOF.Location = New System.Drawing.Point(396, 392)
+        Me.GroupBoxInfoEOF.Name = "GroupBoxInfoEOF"
+        Me.GroupBoxInfoEOF.Size = New System.Drawing.Size(369, 72)
+        Me.GroupBoxInfoEOF.TabIndex = 4
+        Me.GroupBoxInfoEOF.TabStop = False
+        Me.GroupBoxInfoEOF.Text = "Epreuve Orale Facultative Sélectionnée"
+        Me.GroupBoxInfoEOF.Visible = False
         '
         'LabelEOF
         '
         Me.LabelEOF.AutoSize = True
+        Me.LabelEOF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelEOF.Location = New System.Drawing.Point(22, 36)
         Me.LabelEOF.Name = "LabelEOF"
-        Me.LabelEOF.Size = New System.Drawing.Size(43, 20)
+        Me.LabelEOF.Size = New System.Drawing.Size(45, 22)
         Me.LabelEOF.TabIndex = 0
         Me.LabelEOF.Text = "EOF"
         '
         'ButtonSupp
         '
         Me.ButtonSupp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonSupp.Location = New System.Drawing.Point(624, 450)
+        Me.ButtonSupp.Location = New System.Drawing.Point(623, 497)
         Me.ButtonSupp.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonSupp.Name = "ButtonSupp"
         Me.ButtonSupp.Size = New System.Drawing.Size(133, 68)
@@ -391,7 +409,7 @@ Partial Class FormRecap
         'ButtonClose
         '
         Me.ButtonClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonClose.Location = New System.Drawing.Point(351, 450)
+        Me.ButtonClose.Location = New System.Drawing.Point(350, 497)
         Me.ButtonClose.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonClose.Name = "ButtonClose"
         Me.ButtonClose.Size = New System.Drawing.Size(133, 68)
@@ -400,13 +418,47 @@ Partial Class FormRecap
         Me.ButtonClose.UseVisualStyleBackColor = True
         Me.ButtonClose.Visible = False
         '
+        'LabelInfoRegion
+        '
+        Me.LabelInfoRegion.AutoSize = True
+        Me.LabelInfoRegion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.LabelInfoRegion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelInfoRegion.Location = New System.Drawing.Point(196, 15)
+        Me.LabelInfoRegion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LabelInfoRegion.Name = "LabelInfoRegion"
+        Me.LabelInfoRegion.Size = New System.Drawing.Size(63, 22)
+        Me.LabelInfoRegion.TabIndex = 24
+        Me.LabelInfoRegion.Text = "Région"
+        Me.LabelInfoRegion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LabelRegion
+        '
+        Me.LabelRegion.AutoSize = True
+        Me.LabelRegion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelRegion.Location = New System.Drawing.Point(7, 15)
+        Me.LabelRegion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LabelRegion.Name = "LabelRegion"
+        Me.LabelRegion.Size = New System.Drawing.Size(181, 20)
+        Me.LabelRegion.TabIndex = 23
+        Me.LabelRegion.Text = "Région des épreuves  :"
+        Me.LabelRegion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.LabelInfoRegion)
+        Me.Panel1.Controls.Add(Me.LabelRegion)
+        Me.Panel1.Location = New System.Drawing.Point(214, 85)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(351, 47)
+        Me.Panel1.TabIndex = 0
+        '
         'FormRecap
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(826, 543)
+        Me.ClientSize = New System.Drawing.Size(814, 606)
         Me.Controls.Add(Me.ButtonSupp)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.GroupBoxInfoEOF)
         Me.Controls.Add(Me.GroupBoxInfoEOrales)
         Me.Controls.Add(Me.GroupBoxInfoEEcrites)
         Me.Controls.Add(Me.GroupBoxInfoCandidat)
@@ -415,6 +467,7 @@ Partial Class FormRecap
         Me.Controls.Add(Me.ButtonValider)
         Me.Controls.Add(Me.LabelRecap)
         Me.Controls.Add(Me.ButtonClose)
+        Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FormRecap"
@@ -425,8 +478,10 @@ Partial Class FormRecap
         Me.GroupBoxInfoEEcrites.PerformLayout()
         Me.GroupBoxInfoEOrales.ResumeLayout(False)
         Me.GroupBoxInfoEOrales.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.GroupBoxInfoEOF.ResumeLayout(False)
+        Me.GroupBoxInfoEOF.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -457,8 +512,11 @@ Partial Class FormRecap
     Friend WithEvents LabelEO3 As Label
     Friend WithEvents LabelEO2 As Label
     Friend WithEvents LabelEO1 As Label
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GroupBoxInfoEOF As GroupBox
     Friend WithEvents LabelEOF As Label
     Friend WithEvents ButtonSupp As Button
     Friend WithEvents ButtonClose As Button
+    Friend WithEvents LabelInfoRegion As Label
+    Friend WithEvents LabelRegion As Label
+    Friend WithEvents Panel1 As Panel
 End Class

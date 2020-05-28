@@ -30,6 +30,7 @@ Partial Class FormInscripChoixEpreuves
         Me.LabelRegion = New System.Windows.Forms.Label()
         Me.GroupBoxCandidat = New System.Windows.Forms.GroupBox()
         Me.GroupBoxEcrit = New System.Windows.Forms.GroupBox()
+        Me.LabelNbEERestant = New System.Windows.Forms.Label()
         Me.CheckBoxMaths = New System.Windows.Forms.CheckBox()
         Me.CheckBoxExp = New System.Windows.Forms.CheckBox()
         Me.CheckBoxSys = New System.Windows.Forms.CheckBox()
@@ -60,6 +61,7 @@ Partial Class FormInscripChoixEpreuves
         Me.ButtonAnnuler = New System.Windows.Forms.Button()
         Me.ButtonValidChoixEp = New System.Windows.Forms.Button()
         Me.Timer1min30 = New System.Windows.Forms.Timer(Me.components)
+        Me.LabelNbEORestant = New System.Windows.Forms.Label()
         Me.GroupBoxCandidat.SuspendLayout()
         Me.GroupBoxEcrit.SuspendLayout()
         Me.GroupBoxOral.SuspendLayout()
@@ -69,10 +71,11 @@ Partial Class FormInscripChoixEpreuves
         'LabelNom
         '
         Me.LabelNom.AutoSize = True
+        Me.LabelNom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelNom.Location = New System.Drawing.Point(31, 33)
         Me.LabelNom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelNom.Name = "LabelNom"
-        Me.LabelNom.Size = New System.Drawing.Size(44, 20)
+        Me.LabelNom.Size = New System.Drawing.Size(46, 22)
         Me.LabelNom.TabIndex = 0
         Me.LabelNom.Text = "Nom"
         '
@@ -90,10 +93,11 @@ Partial Class FormInscripChoixEpreuves
         'LabelPrenom
         '
         Me.LabelPrenom.AutoSize = True
+        Me.LabelPrenom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelPrenom.Location = New System.Drawing.Point(31, 62)
         Me.LabelPrenom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelPrenom.Name = "LabelPrenom"
-        Me.LabelPrenom.Size = New System.Drawing.Size(67, 20)
+        Me.LabelPrenom.Size = New System.Drawing.Size(69, 22)
         Me.LabelPrenom.TabIndex = 1
         Me.LabelPrenom.Text = "Prénom"
         '
@@ -140,12 +144,23 @@ Partial Class FormInscripChoixEpreuves
         Me.GroupBoxEcrit.Controls.Add(Me.CheckBoxGesE)
         Me.GroupBoxEcrit.Controls.Add(Me.CheckBoxBD)
         Me.GroupBoxEcrit.Controls.Add(Me.CheckBoxAlgo)
-        Me.GroupBoxEcrit.Location = New System.Drawing.Point(50, 154)
+        Me.GroupBoxEcrit.Location = New System.Drawing.Point(69, 154)
         Me.GroupBoxEcrit.Name = "GroupBoxEcrit"
         Me.GroupBoxEcrit.Size = New System.Drawing.Size(921, 168)
         Me.GroupBoxEcrit.TabIndex = 6
         Me.GroupBoxEcrit.TabStop = False
         Me.GroupBoxEcrit.Text = "Epreuves Ecrites Disponibles"
+        '
+        'LabelNbEERestant
+        '
+        Me.LabelNbEERestant.AutoSize = True
+        Me.LabelNbEERestant.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.LabelNbEERestant.Location = New System.Drawing.Point(12, 228)
+        Me.LabelNbEERestant.Name = "LabelNbEERestant"
+        Me.LabelNbEERestant.Size = New System.Drawing.Size(51, 22)
+        Me.LabelNbEERestant.TabIndex = 6
+        Me.LabelNbEERestant.Text = "nbEE"
+        Me.LabelNbEERestant.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'CheckBoxMaths
         '
@@ -278,7 +293,7 @@ Partial Class FormInscripChoixEpreuves
         Me.GroupBoxOral.Controls.Add(Me.CheckBoxEsp)
         Me.GroupBoxOral.Controls.Add(Me.CheckBoxChi)
         Me.GroupBoxOral.Controls.Add(Me.CheckBoxAng)
-        Me.GroupBoxOral.Location = New System.Drawing.Point(50, 338)
+        Me.GroupBoxOral.Location = New System.Drawing.Point(69, 338)
         Me.GroupBoxOral.Name = "GroupBoxOral"
         Me.GroupBoxOral.Size = New System.Drawing.Size(490, 165)
         Me.GroupBoxOral.TabIndex = 7
@@ -422,7 +437,8 @@ Partial Class FormInscripChoixEpreuves
         Me.GroupBoxEFacultative.Controls.Add(Me.ComboBoxEFacultative)
         Me.GroupBoxEFacultative.Controls.Add(Me.RadioButtonNon)
         Me.GroupBoxEFacultative.Controls.Add(Me.RadioButtonYes)
-        Me.GroupBoxEFacultative.Location = New System.Drawing.Point(560, 338)
+        Me.GroupBoxEFacultative.Enabled = False
+        Me.GroupBoxEFacultative.Location = New System.Drawing.Point(579, 338)
         Me.GroupBoxEFacultative.Name = "GroupBoxEFacultative"
         Me.GroupBoxEFacultative.Size = New System.Drawing.Size(411, 165)
         Me.GroupBoxEFacultative.TabIndex = 8
@@ -431,7 +447,7 @@ Partial Class FormInscripChoixEpreuves
         '
         'ButtonAnnuler
         '
-        Me.ButtonAnnuler.Location = New System.Drawing.Point(267, 525)
+        Me.ButtonAnnuler.Location = New System.Drawing.Point(262, 525)
         Me.ButtonAnnuler.Name = "ButtonAnnuler"
         Me.ButtonAnnuler.Size = New System.Drawing.Size(179, 59)
         Me.ButtonAnnuler.TabIndex = 9
@@ -440,18 +456,34 @@ Partial Class FormInscripChoixEpreuves
         '
         'ButtonValidChoixEp
         '
-        Me.ButtonValidChoixEp.Location = New System.Drawing.Point(609, 525)
+        Me.ButtonValidChoixEp.Location = New System.Drawing.Point(628, 525)
         Me.ButtonValidChoixEp.Name = "ButtonValidChoixEp"
         Me.ButtonValidChoixEp.Size = New System.Drawing.Size(179, 59)
         Me.ButtonValidChoixEp.TabIndex = 10
         Me.ButtonValidChoixEp.Text = "Valider Enregistrement"
         Me.ButtonValidChoixEp.UseVisualStyleBackColor = True
         '
+        'Timer1min30
+        '
+        '
+        'LabelNbEORestant
+        '
+        Me.LabelNbEORestant.AutoSize = True
+        Me.LabelNbEORestant.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.LabelNbEORestant.Location = New System.Drawing.Point(12, 414)
+        Me.LabelNbEORestant.Name = "LabelNbEORestant"
+        Me.LabelNbEORestant.Size = New System.Drawing.Size(53, 22)
+        Me.LabelNbEORestant.TabIndex = 7
+        Me.LabelNbEORestant.Text = "nbEO"
+        Me.LabelNbEORestant.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'FormInscripChoixEpreuves
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1017, 598)
+        Me.ClientSize = New System.Drawing.Size(1046, 598)
+        Me.Controls.Add(Me.LabelNbEERestant)
+        Me.Controls.Add(Me.LabelNbEORestant)
         Me.Controls.Add(Me.ButtonValidChoixEp)
         Me.Controls.Add(Me.ButtonAnnuler)
         Me.Controls.Add(Me.GroupBoxOral)
@@ -515,4 +547,6 @@ Partial Class FormInscripChoixEpreuves
     Friend WithEvents CheckBoxExpO As CheckBox
     Friend WithEvents CheckBoxSysO As CheckBox
     Friend WithEvents CheckBoxMathsO As CheckBox
+    Friend WithEvents LabelNbEERestant As Label
+    Friend WithEvents LabelNbEORestant As Label
 End Class
