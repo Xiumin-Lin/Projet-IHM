@@ -30,7 +30,6 @@ Partial Class FormInscripChoixEpreuves
         Me.LabelRegion = New System.Windows.Forms.Label()
         Me.GroupBoxCandidat = New System.Windows.Forms.GroupBox()
         Me.GroupBoxEcrit = New System.Windows.Forms.GroupBox()
-        Me.LabelNbEERestant = New System.Windows.Forms.Label()
         Me.CheckBoxMaths = New System.Windows.Forms.CheckBox()
         Me.CheckBoxExp = New System.Windows.Forms.CheckBox()
         Me.CheckBoxSys = New System.Windows.Forms.CheckBox()
@@ -43,6 +42,7 @@ Partial Class FormInscripChoixEpreuves
         Me.CheckBoxGesE = New System.Windows.Forms.CheckBox()
         Me.CheckBoxBD = New System.Windows.Forms.CheckBox()
         Me.CheckBoxAlgo = New System.Windows.Forms.CheckBox()
+        Me.LabelNbEERestant = New System.Windows.Forms.Label()
         Me.GroupBoxOral = New System.Windows.Forms.GroupBox()
         Me.CheckBoxMathsO = New System.Windows.Forms.CheckBox()
         Me.CheckBoxExpO = New System.Windows.Forms.CheckBox()
@@ -125,7 +125,7 @@ Partial Class FormInscripChoixEpreuves
         Me.GroupBoxCandidat.Controls.Add(Me.LabelPrenom)
         Me.GroupBoxCandidat.Location = New System.Drawing.Point(30, 29)
         Me.GroupBoxCandidat.Name = "GroupBoxCandidat"
-        Me.GroupBoxCandidat.Size = New System.Drawing.Size(228, 100)
+        Me.GroupBoxCandidat.Size = New System.Drawing.Size(273, 100)
         Me.GroupBoxCandidat.TabIndex = 5
         Me.GroupBoxCandidat.TabStop = False
         Me.GroupBoxCandidat.Text = "Candidat"
@@ -150,17 +150,6 @@ Partial Class FormInscripChoixEpreuves
         Me.GroupBoxEcrit.TabIndex = 6
         Me.GroupBoxEcrit.TabStop = False
         Me.GroupBoxEcrit.Text = "Epreuves Ecrites Disponibles"
-        '
-        'LabelNbEERestant
-        '
-        Me.LabelNbEERestant.AutoSize = True
-        Me.LabelNbEERestant.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.LabelNbEERestant.Location = New System.Drawing.Point(12, 228)
-        Me.LabelNbEERestant.Name = "LabelNbEERestant"
-        Me.LabelNbEERestant.Size = New System.Drawing.Size(51, 22)
-        Me.LabelNbEERestant.TabIndex = 6
-        Me.LabelNbEERestant.Text = "nbEE"
-        Me.LabelNbEERestant.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'CheckBoxMaths
         '
@@ -197,9 +186,9 @@ Partial Class FormInscripChoixEpreuves
         Me.CheckBoxVBNET.AutoSize = True
         Me.CheckBoxVBNET.Location = New System.Drawing.Point(676, 114)
         Me.CheckBoxVBNET.Name = "CheckBoxVBNET"
-        Me.CheckBoxVBNET.Size = New System.Drawing.Size(160, 24)
+        Me.CheckBoxVBNET.Size = New System.Drawing.Size(167, 24)
         Me.CheckBoxVBNET.TabIndex = 11
-        Me.CheckBoxVBNET.Text = "Visual Basic .Net"
+        Me.CheckBoxVBNET.Text = "Visual Basic .NET"
         Me.CheckBoxVBNET.UseVisualStyleBackColor = True
         '
         'CheckBoxDroit
@@ -281,6 +270,17 @@ Partial Class FormInscripChoixEpreuves
         Me.CheckBoxAlgo.TabIndex = 0
         Me.CheckBoxAlgo.Text = "Algorithmique"
         Me.CheckBoxAlgo.UseVisualStyleBackColor = True
+        '
+        'LabelNbEERestant
+        '
+        Me.LabelNbEERestant.AutoSize = True
+        Me.LabelNbEERestant.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.LabelNbEERestant.Location = New System.Drawing.Point(12, 228)
+        Me.LabelNbEERestant.Name = "LabelNbEERestant"
+        Me.LabelNbEERestant.Size = New System.Drawing.Size(51, 22)
+        Me.LabelNbEERestant.TabIndex = 6
+        Me.LabelNbEERestant.Text = "nbEE"
+        Me.LabelNbEERestant.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'GroupBoxOral
         '

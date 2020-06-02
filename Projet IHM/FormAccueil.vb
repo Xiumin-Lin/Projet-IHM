@@ -6,12 +6,19 @@
     End Sub
 
     Private Sub ButtonModif_Click(sender As Object, e As EventArgs) Handles ButtonModif.Click
-        FormModifCandidat.Show()
+        FormModifSupp.Text = "Modification d'un candidat"
+        FormModifSupp.LabelTitre.Text = "Modification"
+        FormModifSupp.Show()
         Me.Hide()
     End Sub
 
     Private Sub ButtonSupp_Click(sender As Object, e As EventArgs) Handles ButtonSupp.Click
-        FormSuppCandidat.Show()
+        With FormModifSupp
+            .Text = "Suppression d'un candidat"
+            .LabelTitre.Text = "Suppression"
+            .etatModif = False 'Le formulaire sera ouvert en mode suppression
+            .Show()
+        End With
         Me.Hide()
     End Sub
 

@@ -1,7 +1,14 @@
 ﻿Public Class FormRecap
-    Dim numCandidat As Integer = FormInscripInfoCandidat.numCandidat
+    Public etatInscription As Boolean = False
+    Public etatSupp As Boolean = False
+    Public numCandidat As Integer
     Private Sub FormRecap_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        With listCandidat(numCandidat)
+        If etatSupp = True Then
+            candInscrit = listCandidat(numCandidat)
+        End If
+        'Init Info Candidat
+        With candInscrit
+            LabelInfoNum.Text = numCandidat.ToString
             LabelInfoNom.Text = .Nom
             LabelInfoPrenom.Text = .Prenom
             LabelInfoAge.Text = .Age
@@ -21,30 +28,56 @@
                 cpt += 1
             Next
         End With
+        'Gestion des boutons
+        If etatInscription Then 'l'état modifer affiche les même boutons que l'inscription
+            AfficheButtonsInscrip()
+        ElseIf etatSupp Then
+            AfficheButtonsSupp()
+        Else 'Si ni inscription ni suppression, on est alors dans l'état Bilan
+            AfficheButtonsBilan()
+        End If
+    End Sub
+    'Les boutons sont par défauts invisivle (visible = false)
+    Private Sub AfficheButtonsInscrip()
+        ButtonAnnuler.Visible = True
+        ButtonModif.Visible = True
+        ButtonValider.Visible = True
+        GroupBoxNum.Visible = False
+    End Sub
+    Private Sub AfficheButtonsSupp()
+        ButtonAnnuler.Visible = True
+        ButtonSupp.Visible = True
+    End Sub
+    Private Sub AfficheButtonsBilan()
+        ButtonAnnuler.Visible = True
+        ButtonAnnuler.Text = "Fermer"
     End Sub
 
     Private Sub ButtonAnnuler_Click(sender As Object, e As EventArgs) Handles ButtonAnnuler.Click
-        Me.Close()
-        FormInscripInfoCandidat.Close()
-        FormInscripChoixEpreuves.Close()
-        FormAccueil.Show()
+        If etatInscription Or etatSupp Then
+            FormInscripInfoCandidat.Close()
+            FormInscripChoixEpreuves.Close()
+            FormAccueil.Show()
+        End If
+        Me.Close() 'Si on est à l'état bilan (provisoire ou final), seule la dernière instruction se déclenche
     End Sub
 
     Private Sub ButtonModif_Click(sender As Object, e As EventArgs) Handles ButtonModif.Click
         Me.Close()
         FormInscripInfoCandidat.Timer1min.Start()
-        FormInscripInfoCandidat.numCandidat = numCandidat
+        FormInscripInfoCandidat.numCandidat = Me.numCandidat
         FormInscripInfoCandidat.Show()
     End Sub
 
     Private Sub ButtonValider_Click(sender As Object, e As EventArgs) Handles ButtonValider.Click
-        'Enregistrer l'inscription
-        If numCandidat = NumAutoCandidat Then
-            MsgBox("La Candidature a bien été enregistré. Le numéro d'incription du candidat enregistré est " + numCandidat.ToString,
+        'Enregistrer officiel de l'inscription
+        listCandidat(numCandidat) = candInscrit
+        If numCandidat = NumAutoCandidat Then 'Le cas d'un nouveau candidat
+            MsgBox("La candidature a bien été enregistré." + vbCrLf + "Voici le numéro d'incription du candidat enregistré : " + numCandidat.ToString,
                    MsgBoxStyle.Information, "Confirmation de l'enregistrement")
             NumAutoCandidat += 1
-        Else
-            MsgBox("La Candidature du candidat n° " + numCandidat.ToString + " bien été modifié",
+        Else 'Le cas d'une mise à jour des infos d'un candidat
+            MsgBox("La candidature du candidat n° " + numCandidat.ToString + " bien été modifié",
                MsgBoxStyle.Information, "Confirmation de l'enregistrement")
         End If
 
@@ -56,13 +89,15 @@
 
     Private Sub ButtonSupp_Click(sender As Object, e As EventArgs) Handles ButtonSupp.Click
         'Supprimer le candidat
-        MsgBox("Le candidat numéro ... a bien été supprimer",
-               MsgBoxStyle.Information, "Confirmation de la suppression")
-        Me.Close()
-        FormAccueil.Show()
-    End Sub
-
-    Private Sub ButtonClose_Click(sender As Object, e As EventArgs) Handles ButtonClose.Click
-        Me.Close()
+        Dim choix As Integer = MsgBox("Supprimer le candidat n°" + numCandidat.ToString + " ?",
+                                       MsgBoxStyle.YesNo + MsgBoxStyle.DefaultButton2 + MsgBoxStyle.Question,
+                                       "Demande de Confirmation de suppression")
+        If choix = MsgBoxResult.Yes Then
+            listCandidat.Remove(numCandidat)
+            MsgBox("Le candidat n°" + numCandidat.ToString + " a bien été supprimer",
+                           MsgBoxStyle.Information, "Confirmation de la suppression")
+            Me.Close()
+            FormAccueil.Show()
+        End If
     End Sub
 End Class

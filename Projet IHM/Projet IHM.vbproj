@@ -130,16 +130,10 @@
     <Compile Include="FormRecap.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormModifCandidat.Designer.vb">
-      <DependentUpon>FormModifCandidat.vb</DependentUpon>
+    <Compile Include="FormModifSupp.Designer.vb">
+      <DependentUpon>FormModifSupp.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormModifCandidat.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSuppCandidat.Designer.vb">
-      <DependentUpon>FormSuppCandidat.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormSuppCandidat.vb">
+    <Compile Include="FormModifSupp.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModuleProjetIHM.vb" />
@@ -182,11 +176,8 @@
     <EmbeddedResource Include="FormRecap.resx">
       <DependentUpon>FormRecap.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormModifCandidat.resx">
-      <DependentUpon>FormModifCandidat.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSuppCandidat.resx">
-      <DependentUpon>FormSuppCandidat.vb</DependentUpon>
+    <EmbeddedResource Include="FormModifSupp.resx">
+      <DependentUpon>FormModifSupp.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

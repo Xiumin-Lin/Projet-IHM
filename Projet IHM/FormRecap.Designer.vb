@@ -51,15 +51,17 @@ Partial Class FormRecap
         Me.GroupBoxInfoEOF = New System.Windows.Forms.GroupBox()
         Me.LabelEOF = New System.Windows.Forms.Label()
         Me.ButtonSupp = New System.Windows.Forms.Button()
-        Me.ButtonClose = New System.Windows.Forms.Button()
         Me.LabelInfoRegion = New System.Windows.Forms.Label()
         Me.LabelRegion = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GroupBoxNum = New System.Windows.Forms.GroupBox()
+        Me.LabelInfoNum = New System.Windows.Forms.Label()
         Me.GroupBoxInfoCandidat.SuspendLayout()
         Me.GroupBoxInfoEEcrites.SuspendLayout()
         Me.GroupBoxInfoEOrales.SuspendLayout()
         Me.GroupBoxInfoEOF.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.GroupBoxNum.SuspendLayout()
         Me.SuspendLayout()
         '
         'LabelRecap
@@ -84,8 +86,9 @@ Partial Class FormRecap
         Me.ButtonValider.Name = "ButtonValider"
         Me.ButtonValider.Size = New System.Drawing.Size(133, 68)
         Me.ButtonValider.TabIndex = 7
-        Me.ButtonValider.Text = "Valider Inscription"
+        Me.ButtonValider.Text = "Valider "
         Me.ButtonValider.UseVisualStyleBackColor = True
+        Me.ButtonValider.Visible = False
         '
         'ButtonAnnuler
         '
@@ -95,8 +98,9 @@ Partial Class FormRecap
         Me.ButtonAnnuler.Name = "ButtonAnnuler"
         Me.ButtonAnnuler.Size = New System.Drawing.Size(133, 68)
         Me.ButtonAnnuler.TabIndex = 5
-        Me.ButtonAnnuler.Text = "Annuler Inscription"
+        Me.ButtonAnnuler.Text = "Annuler"
         Me.ButtonAnnuler.UseVisualStyleBackColor = True
+        Me.ButtonAnnuler.Visible = False
         '
         'ButtonModif
         '
@@ -106,8 +110,9 @@ Partial Class FormRecap
         Me.ButtonModif.Name = "ButtonModif"
         Me.ButtonModif.Size = New System.Drawing.Size(133, 68)
         Me.ButtonModif.TabIndex = 6
-        Me.ButtonModif.Text = "Modifier Inscription"
+        Me.ButtonModif.Text = "Modifier"
         Me.ButtonModif.UseVisualStyleBackColor = True
+        Me.ButtonModif.Visible = False
         '
         'LabelNom
         '
@@ -406,18 +411,6 @@ Partial Class FormRecap
         Me.ButtonSupp.UseVisualStyleBackColor = True
         Me.ButtonSupp.Visible = False
         '
-        'ButtonClose
-        '
-        Me.ButtonClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonClose.Location = New System.Drawing.Point(350, 497)
-        Me.ButtonClose.Margin = New System.Windows.Forms.Padding(4)
-        Me.ButtonClose.Name = "ButtonClose"
-        Me.ButtonClose.Size = New System.Drawing.Size(133, 68)
-        Me.ButtonClose.TabIndex = 9
-        Me.ButtonClose.Text = "Fermer"
-        Me.ButtonClose.UseVisualStyleBackColor = True
-        Me.ButtonClose.Visible = False
-        '
         'LabelInfoRegion
         '
         Me.LabelInfoRegion.AutoSize = True
@@ -452,11 +445,32 @@ Partial Class FormRecap
         Me.Panel1.Size = New System.Drawing.Size(351, 47)
         Me.Panel1.TabIndex = 0
         '
+        'GroupBoxNum
+        '
+        Me.GroupBoxNum.Controls.Add(Me.LabelInfoNum)
+        Me.GroupBoxNum.Location = New System.Drawing.Point(52, 72)
+        Me.GroupBoxNum.Name = "GroupBoxNum"
+        Me.GroupBoxNum.Size = New System.Drawing.Size(112, 60)
+        Me.GroupBoxNum.TabIndex = 5
+        Me.GroupBoxNum.TabStop = False
+        Me.GroupBoxNum.Text = "N°Candidat"
+        '
+        'LabelInfoNum
+        '
+        Me.LabelInfoNum.AutoSize = True
+        Me.LabelInfoNum.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.LabelInfoNum.Location = New System.Drawing.Point(30, 25)
+        Me.LabelInfoNum.Name = "LabelInfoNum"
+        Me.LabelInfoNum.Size = New System.Drawing.Size(38, 22)
+        Me.LabelInfoNum.TabIndex = 0
+        Me.LabelInfoNum.Text = "???"
+        '
         'FormRecap
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(814, 606)
+        Me.Controls.Add(Me.GroupBoxNum)
         Me.Controls.Add(Me.ButtonSupp)
         Me.Controls.Add(Me.GroupBoxInfoEOF)
         Me.Controls.Add(Me.GroupBoxInfoEOrales)
@@ -466,7 +480,6 @@ Partial Class FormRecap
         Me.Controls.Add(Me.ButtonAnnuler)
         Me.Controls.Add(Me.ButtonValider)
         Me.Controls.Add(Me.LabelRecap)
-        Me.Controls.Add(Me.ButtonClose)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
@@ -482,6 +495,8 @@ Partial Class FormRecap
         Me.GroupBoxInfoEOF.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.GroupBoxNum.ResumeLayout(False)
+        Me.GroupBoxNum.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -515,8 +530,9 @@ Partial Class FormRecap
     Friend WithEvents GroupBoxInfoEOF As GroupBox
     Friend WithEvents LabelEOF As Label
     Friend WithEvents ButtonSupp As Button
-    Friend WithEvents ButtonClose As Button
     Friend WithEvents LabelInfoRegion As Label
     Friend WithEvents LabelRegion As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents GroupBoxNum As GroupBox
+    Friend WithEvents LabelInfoNum As Label
 End Class

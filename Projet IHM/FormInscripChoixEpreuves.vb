@@ -1,9 +1,9 @@
 ﻿Public Class FormInscripChoixEpreuves
-    Dim ErreurValidation As Boolean = False
     Dim Temps As Integer = 90
     Dim nbEERestant As Integer = NB_EE_MAX
     Dim nbEORestant As Integer = NB_EO_MAX
     Dim numCandidat As Integer = FormInscripInfoCandidat.numCandidat
+
     Private Sub FormInscripChoixEpreuves_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Init le timer
         Me.Text = "Formulaire d'inscription : Choix des épreuves | " + TimeOfDay + " | Temps Restants : " + Temps.ToString + "s"
@@ -22,9 +22,9 @@
             AddHandler chk.CheckedChanged, AddressOf CheckBoxOral_CheckedChanged
         Next
 
-        'Init le candidat s'il existe
+        'Init le candidat s'il existe (utilisé lors d'une modif ou supp)
         If numCandidat < NumAutoCandidat Then
-            With listCandidat(numCandidat)
+            With candInscrit
                 'Init la region du candidat
                 For idx As Integer = 0 To ComboBoxRegion.Items.Count - 1
                     If .Region.Equals(ComboBoxRegion.Items(idx)) Then
@@ -193,56 +193,54 @@
     End Sub
 
     Private Sub ButtonValidChoixEp_Click(sender As Object, e As EventArgs) Handles ButtonValidChoixEp.Click
-        ErreurValidation = False 'Verif Condition
+        Dim ErreurValidation As Boolean = False 'Verif Condition
+        Dim s As String = ""
         If nbEERestant <> 0 Then
+            s = "- Vous devez obligatoirement choisir 4 épreuves écrites" + vbCrLf
             GroupBoxEcrit.ForeColor = Color.Red
             ErreurValidation = True
         End If
         If nbEORestant <> 0 Then
+            s += "- Vous devez obligatoirement choisir 3 épreuves orales" + vbCrLf
             GroupBoxOral.ForeColor = Color.Red
             ErreurValidation = True
         End If
         If Not RadioButtonYes.Checked And Not RadioButtonNon.Checked Then
+            s += "- Vous devez indiquer vous choix concernant le choix d'une épreuve facultavive"
             RadioButtonYes.ForeColor = Color.Red
             RadioButtonNon.ForeColor = Color.Red
             ErreurValidation = True
         End If
 
-        If Not ErreurValidation Then
-            Dim p As Candidat = listCandidat(numCandidat)
-
-            p.Region = ComboBoxRegion.Text
+        If ErreurValidation Then
+            MsgBox(s, MsgBoxStyle.Exclamation, "Validation non autorisée")
+        Else
+            candInscrit.Region = ComboBoxRegion.Text
             If RadioButtonNon.Checked Then
                 FormRecap.GroupBoxInfoEOF.Visible = False
-                p.EOF = String.Empty
+                candInscrit.EOF = String.Empty
             Else
                 FormRecap.GroupBoxInfoEOF.Visible = True
-                p.EOF = ComboBoxEFacultative.Text
+                candInscrit.EOF = ComboBoxEFacultative.Text
             End If
 
-            p.EE.Clear()
+            candInscrit.EE.Clear()
             For Each chk As CheckBox In GroupBoxEcrit.Controls
                 If chk.Checked Then
-                    p.EE.Add(chk.Text)
+                    candInscrit.EE.Add(chk.Text)
                 End If
             Next
-            p.EO.Clear()
+            candInscrit.EO.Clear()
             For Each chk As CheckBox In GroupBoxOral.Controls
                 If chk.Checked Then
-                    p.EO.Add(chk.Text)
+                    candInscrit.EO.Add(chk.Text)
                 End If
             Next
-            listCandidat(numCandidat) = p
 
-            With FormRecap
-                .ButtonAnnuler.Visible = True
-                .ButtonModif.Visible = True
-                .ButtonValider.Visible = True
-                .ButtonSupp.Visible = False
-                .ButtonClose.Visible = False
-            End With
+            FormRecap.etatInscription = True
             Me.Hide()
             Timer1min30.Stop()
+            FormRecap.numCandidat = Me.numCandidat
             FormRecap.Show()
         End If
     End Sub

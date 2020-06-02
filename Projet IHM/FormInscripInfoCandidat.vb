@@ -113,26 +113,27 @@
         End If
 
         If Not ErreurValidation Then
-            Dim candidat As New Candidat(TextBoxNom.Text, TextBoxPrenom.Text, LabelInfoAge.Text,
+            candInscrit = New Candidat(TextBoxNom.Text, TextBoxPrenom.Text, LabelInfoAge.Text,
                                          TextBoxAdresse.Text, TextBoxCP.Text, TextBoxVille.Text)
 
-            If listCandidat.ContainsKey(numCandidat) Then
-                With candidat
-                    .EE = listCandidat(numCandidat).EE
-                    .EO = listCandidat(numCandidat).EO
+            If listCandidat.ContainsKey(numCandidat) Then 'Si le candidat existe déjà
+                With candInscrit 'On prend une copie des lists 
+                    For Each ee As String In listCandidat(numCandidat).EE
+                        .EE.Add(ee)
+                    Next
+                    For Each eo As String In listCandidat(numCandidat).EO
+                        .EO.Add(eo)
+                    Next
                     .EOF = listCandidat(numCandidat).EOF
                     .Region = listCandidat(numCandidat).Region
                 End With
-                listCandidat(numCandidat) = candidat
-            Else
-                listCandidat.Add(numCandidat, candidat)
             End If
 
             With FormInscripChoixEpreuves
-                .Show()
                 .Timer1min30.Start()
                 .LabelNom.Text = TextBoxNom.Text
                 .LabelPrenom.Text = TextBoxPrenom.Text
+                .Show()
             End With
             Timer1min.Stop()
             Me.Hide()

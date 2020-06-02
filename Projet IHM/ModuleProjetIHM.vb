@@ -29,12 +29,16 @@
     Public ReadOnly NB_EE_MAX As Integer = 4
     Public ReadOnly NB_EO_MAX As Integer = 3
 
+    Public candInscrit As Candidat 'stock les données d'un candidat lors de son inscription
     Public NumAutoCandidat As Integer = 1
     Public listCandidat As Dictionary(Of Integer, Candidat) = New Dictionary(Of Integer, Candidat)
+
     Public tabRegion() As String = {"Auvergne", "Bordelais", "Bourgogne", "Bretagne", "Corse",
         "Nord", "Normandie", "Paris", "Poitou", "Roussillon"}
+
     Public tabEE() As String = {"Algorithmique", "Gestion", "Programmation Web", "Base de données", "Langage C",
                "Réseau", "Droit", "Langage Java", "Système", "Expression", "Mathématiques", "Visual Basic .NET"}
+
     Public tabEO() As String = {"Anglais", "Chinois", "Espagnol", "Droit", "Expression",
                                 "Gestion", "Mathématiques", "Réseau", "Système"}
 

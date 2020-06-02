@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormModifCandidat
+Partial Class FormModifSupp
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
@@ -34,7 +34,7 @@ Partial Class FormModifCandidat
         Me.RadioButtonNumCand = New System.Windows.Forms.RadioButton()
         Me.LabelOu = New System.Windows.Forms.Label()
         Me.LabelIndication = New System.Windows.Forms.Label()
-        Me.LabelModif = New System.Windows.Forms.Label()
+        Me.LabelTitre = New System.Windows.Forms.Label()
         Me.PanelID.SuspendLayout()
         Me.PanelNum.SuspendLayout()
         Me.SuspendLayout()
@@ -61,6 +61,7 @@ Partial Class FormModifCandidat
         '
         Me.PanelID.Controls.Add(Me.ComboBoxIdCand)
         Me.PanelID.Controls.Add(Me.LabelIDCandidat)
+        Me.PanelID.Enabled = False
         Me.PanelID.Location = New System.Drawing.Point(107, 237)
         Me.PanelID.Name = "PanelID"
         Me.PanelID.Size = New System.Drawing.Size(356, 74)
@@ -87,6 +88,7 @@ Partial Class FormModifCandidat
         '
         Me.PanelNum.Controls.Add(Me.TextBoxNumCand)
         Me.PanelNum.Controls.Add(Me.LabelNumCandidat)
+        Me.PanelNum.Enabled = False
         Me.PanelNum.Location = New System.Drawing.Point(107, 138)
         Me.PanelNum.Name = "PanelNum"
         Me.PanelNum.Size = New System.Drawing.Size(356, 75)
@@ -121,7 +123,7 @@ Partial Class FormModifCandidat
         'RadioButtonNumCand
         '
         Me.RadioButtonNumCand.AutoSize = True
-        Me.RadioButtonNumCand.Location = New System.Drawing.Point(63, 179)
+        Me.RadioButtonNumCand.Location = New System.Drawing.Point(63, 164)
         Me.RadioButtonNumCand.Name = "RadioButtonNumCand"
         Me.RadioButtonNumCand.Size = New System.Drawing.Size(17, 16)
         Me.RadioButtonNumCand.TabIndex = 25
@@ -146,20 +148,20 @@ Partial Class FormModifCandidat
         Me.LabelIndication.TabIndex = 23
         Me.LabelIndication.Text = "Veuillez entrer le numéro d'inscription ou l'identifiant du candidat :"
         '
-        'LabelModif
+        'LabelTitre
         '
-        Me.LabelModif.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.LabelTitre.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LabelModif.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelModif.Location = New System.Drawing.Point(12, 24)
-        Me.LabelModif.Name = "LabelModif"
-        Me.LabelModif.Size = New System.Drawing.Size(549, 57)
-        Me.LabelModif.TabIndex = 22
-        Me.LabelModif.Text = "Modification"
-        Me.LabelModif.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LabelTitre.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTitre.Location = New System.Drawing.Point(12, 24)
+        Me.LabelTitre.Name = "LabelTitre"
+        Me.LabelTitre.Size = New System.Drawing.Size(549, 57)
+        Me.LabelTitre.TabIndex = 22
+        Me.LabelTitre.Text = "Modification/Suppression"
+        Me.LabelTitre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'FormModifCandidat
+        'FormModifSupp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -170,13 +172,13 @@ Partial Class FormModifCandidat
         Me.Controls.Add(Me.RadioButtonNumCand)
         Me.Controls.Add(Me.LabelOu)
         Me.Controls.Add(Me.LabelIndication)
-        Me.Controls.Add(Me.LabelModif)
+        Me.Controls.Add(Me.LabelTitre)
         Me.Controls.Add(Me.ButtonValider)
         Me.Controls.Add(Me.ButtonAnnuler)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "FormModifCandidat"
-        Me.Text = "Modification d'un candidat"
+        Me.Name = "FormModifSupp"
+        Me.Text = "Modif/Supp un candidat"
         Me.PanelID.ResumeLayout(False)
         Me.PanelID.PerformLayout()
         Me.PanelNum.ResumeLayout(False)
@@ -197,5 +199,5 @@ Partial Class FormModifCandidat
     Friend WithEvents RadioButtonNumCand As RadioButton
     Friend WithEvents LabelOu As Label
     Friend WithEvents LabelIndication As Label
-    Friend WithEvents LabelModif As Label
+    Friend WithEvents LabelTitre As Label
 End Class

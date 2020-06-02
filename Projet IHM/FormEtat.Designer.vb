@@ -36,6 +36,10 @@ Partial Class FormEtat
         Me.ListBoxEOF = New System.Windows.Forms.ListBox()
         Me.LabelEOF = New System.Windows.Forms.Label()
         Me.ButtonBack = New System.Windows.Forms.Button()
+        Me.LabelNbCand = New System.Windows.Forms.Label()
+        Me.LabelInfoCand = New System.Windows.Forms.Label()
+        Me.PanelListBox = New System.Windows.Forms.Panel()
+        Me.PanelListBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'LabelEtatActuel
@@ -44,9 +48,9 @@ Partial Class FormEtat
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelEtatActuel.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.2!)
-        Me.LabelEtatActuel.Location = New System.Drawing.Point(12, 9)
+        Me.LabelEtatActuel.Location = New System.Drawing.Point(12, 22)
         Me.LabelEtatActuel.Name = "LabelEtatActuel"
-        Me.LabelEtatActuel.Size = New System.Drawing.Size(945, 42)
+        Me.LabelEtatActuel.Size = New System.Drawing.Size(1103, 42)
         Me.LabelEtatActuel.TabIndex = 0
         Me.LabelEtatActuel.Text = "Etat Actuel des Inscriptions"
         Me.LabelEtatActuel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -55,7 +59,7 @@ Partial Class FormEtat
         '
         Me.LabelID.AutoSize = True
         Me.LabelID.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.LabelID.Location = New System.Drawing.Point(15, 107)
+        Me.LabelID.Location = New System.Drawing.Point(2, 119)
         Me.LabelID.Name = "LabelID"
         Me.LabelID.Size = New System.Drawing.Size(123, 20)
         Me.LabelID.TabIndex = 5
@@ -65,7 +69,7 @@ Partial Class FormEtat
         '
         Me.LabelNom.AutoSize = True
         Me.LabelNom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.LabelNom.Location = New System.Drawing.Point(144, 107)
+        Me.LabelNom.Location = New System.Drawing.Point(131, 119)
         Me.LabelNom.Name = "LabelNom"
         Me.LabelNom.Size = New System.Drawing.Size(44, 20)
         Me.LabelNom.TabIndex = 7
@@ -75,7 +79,7 @@ Partial Class FormEtat
         '
         Me.LabelPrenom.AutoSize = True
         Me.LabelPrenom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.LabelPrenom.Location = New System.Drawing.Point(304, 107)
+        Me.LabelPrenom.Location = New System.Drawing.Point(344, 119)
         Me.LabelPrenom.Name = "LabelPrenom"
         Me.LabelPrenom.Size = New System.Drawing.Size(67, 20)
         Me.LabelPrenom.TabIndex = 9
@@ -85,7 +89,7 @@ Partial Class FormEtat
         '
         Me.LabelEE.AutoSize = True
         Me.LabelEE.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.LabelEE.Location = New System.Drawing.Point(490, 107)
+        Me.LabelEE.Location = New System.Drawing.Point(624, 119)
         Me.LabelEE.Name = "LabelEE"
         Me.LabelEE.Size = New System.Drawing.Size(137, 20)
         Me.LabelEE.TabIndex = 11
@@ -96,9 +100,9 @@ Partial Class FormEtat
         Me.ListBoxID.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
         Me.ListBoxID.FormattingEnabled = True
         Me.ListBoxID.ItemHeight = 20
-        Me.ListBoxID.Location = New System.Drawing.Point(31, 150)
+        Me.ListBoxID.Location = New System.Drawing.Point(3, 3)
         Me.ListBoxID.Name = "ListBoxID"
-        Me.ListBoxID.Size = New System.Drawing.Size(90, 184)
+        Me.ListBoxID.Size = New System.Drawing.Size(90, 204)
         Me.ListBoxID.TabIndex = 6
         '
         'ListBoxNom
@@ -106,9 +110,9 @@ Partial Class FormEtat
         Me.ListBoxNom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
         Me.ListBoxNom.FormattingEnabled = True
         Me.ListBoxNom.ItemHeight = 20
-        Me.ListBoxNom.Location = New System.Drawing.Point(147, 150)
+        Me.ListBoxNom.Location = New System.Drawing.Point(107, 3)
         Me.ListBoxNom.Name = "ListBoxNom"
-        Me.ListBoxNom.Size = New System.Drawing.Size(155, 184)
+        Me.ListBoxNom.Size = New System.Drawing.Size(207, 204)
         Me.ListBoxNom.TabIndex = 8
         '
         'ListBoxPrenom
@@ -116,9 +120,9 @@ Partial Class FormEtat
         Me.ListBoxPrenom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
         Me.ListBoxPrenom.FormattingEnabled = True
         Me.ListBoxPrenom.ItemHeight = 20
-        Me.ListBoxPrenom.Location = New System.Drawing.Point(308, 150)
+        Me.ListBoxPrenom.Location = New System.Drawing.Point(320, 3)
         Me.ListBoxPrenom.Name = "ListBoxPrenom"
-        Me.ListBoxPrenom.Size = New System.Drawing.Size(167, 184)
+        Me.ListBoxPrenom.Size = New System.Drawing.Size(261, 204)
         Me.ListBoxPrenom.TabIndex = 10
         '
         'ListBoxEE
@@ -126,16 +130,16 @@ Partial Class FormEtat
         Me.ListBoxEE.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
         Me.ListBoxEE.FormattingEnabled = True
         Me.ListBoxEE.ItemHeight = 20
-        Me.ListBoxEE.Location = New System.Drawing.Point(494, 150)
+        Me.ListBoxEE.Location = New System.Drawing.Point(600, 3)
         Me.ListBoxEE.Name = "ListBoxEE"
-        Me.ListBoxEE.Size = New System.Drawing.Size(152, 184)
+        Me.ListBoxEE.Size = New System.Drawing.Size(221, 204)
         Me.ListBoxEE.TabIndex = 12
         '
         'LabelEO
         '
         Me.LabelEO.AutoSize = True
         Me.LabelEO.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.LabelEO.Location = New System.Drawing.Point(663, 107)
+        Me.LabelEO.Location = New System.Drawing.Point(851, 119)
         Me.LabelEO.Name = "LabelEO"
         Me.LabelEO.Size = New System.Drawing.Size(134, 20)
         Me.LabelEO.TabIndex = 13
@@ -146,9 +150,9 @@ Partial Class FormEtat
         Me.ListBoxEO.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
         Me.ListBoxEO.FormattingEnabled = True
         Me.ListBoxEO.ItemHeight = 20
-        Me.ListBoxEO.Location = New System.Drawing.Point(666, 150)
+        Me.ListBoxEO.Location = New System.Drawing.Point(827, 3)
         Me.ListBoxEO.Name = "ListBoxEO"
-        Me.ListBoxEO.Size = New System.Drawing.Size(153, 184)
+        Me.ListBoxEO.Size = New System.Drawing.Size(167, 204)
         Me.ListBoxEO.TabIndex = 14
         '
         'ListBoxEOF
@@ -156,15 +160,15 @@ Partial Class FormEtat
         Me.ListBoxEOF.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
         Me.ListBoxEOF.FormattingEnabled = True
         Me.ListBoxEOF.ItemHeight = 20
-        Me.ListBoxEOF.Location = New System.Drawing.Point(837, 150)
+        Me.ListBoxEOF.Location = New System.Drawing.Point(1000, 3)
         Me.ListBoxEOF.Name = "ListBoxEOF"
-        Me.ListBoxEOF.Size = New System.Drawing.Size(109, 184)
+        Me.ListBoxEOF.Size = New System.Drawing.Size(71, 204)
         Me.ListBoxEOF.TabIndex = 16
         '
         'LabelEOF
         '
         Me.LabelEOF.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.LabelEOF.Location = New System.Drawing.Point(834, 107)
+        Me.LabelEOF.Location = New System.Drawing.Point(1003, 99)
         Me.LabelEOF.Name = "LabelEOF"
         Me.LabelEOF.Size = New System.Drawing.Size(112, 40)
         Me.LabelEOF.TabIndex = 15
@@ -173,27 +177,57 @@ Partial Class FormEtat
         'ButtonBack
         '
         Me.ButtonBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.ButtonBack.Location = New System.Drawing.Point(388, 362)
+        Me.ButtonBack.Location = New System.Drawing.Point(447, 362)
         Me.ButtonBack.Name = "ButtonBack"
         Me.ButtonBack.Size = New System.Drawing.Size(180, 45)
         Me.ButtonBack.TabIndex = 17
         Me.ButtonBack.Text = "Retour"
         Me.ButtonBack.UseVisualStyleBackColor = True
         '
+        'LabelNbCand
+        '
+        Me.LabelNbCand.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.LabelNbCand.Location = New System.Drawing.Point(15, 22)
+        Me.LabelNbCand.Name = "LabelNbCand"
+        Me.LabelNbCand.Size = New System.Drawing.Size(87, 44)
+        Me.LabelNbCand.TabIndex = 18
+        Me.LabelNbCand.Text = "Nb de candidat :"
+        '
+        'LabelInfoCand
+        '
+        Me.LabelInfoCand.AutoSize = True
+        Me.LabelInfoCand.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.LabelInfoCand.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.LabelInfoCand.Location = New System.Drawing.Point(108, 42)
+        Me.LabelInfoCand.Name = "LabelInfoCand"
+        Me.LabelInfoCand.Size = New System.Drawing.Size(38, 22)
+        Me.LabelInfoCand.TabIndex = 19
+        Me.LabelInfoCand.Text = "???"
+        '
+        'PanelListBox
+        '
+        Me.PanelListBox.Controls.Add(Me.ListBoxID)
+        Me.PanelListBox.Controls.Add(Me.ListBoxPrenom)
+        Me.PanelListBox.Controls.Add(Me.ListBoxNom)
+        Me.PanelListBox.Controls.Add(Me.ListBoxEE)
+        Me.PanelListBox.Controls.Add(Me.ListBoxEOF)
+        Me.PanelListBox.Controls.Add(Me.ListBoxEO)
+        Me.PanelListBox.Location = New System.Drawing.Point(28, 142)
+        Me.PanelListBox.Name = "PanelListBox"
+        Me.PanelListBox.Size = New System.Drawing.Size(1074, 214)
+        Me.PanelListBox.TabIndex = 16
+        '
         'FormEtat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(969, 429)
+        Me.ClientSize = New System.Drawing.Size(1127, 429)
+        Me.Controls.Add(Me.PanelListBox)
+        Me.Controls.Add(Me.LabelInfoCand)
+        Me.Controls.Add(Me.LabelNbCand)
         Me.Controls.Add(Me.ButtonBack)
-        Me.Controls.Add(Me.ListBoxEOF)
         Me.Controls.Add(Me.LabelEOF)
-        Me.Controls.Add(Me.ListBoxEO)
         Me.Controls.Add(Me.LabelEO)
-        Me.Controls.Add(Me.ListBoxEE)
-        Me.Controls.Add(Me.ListBoxPrenom)
-        Me.Controls.Add(Me.ListBoxNom)
-        Me.Controls.Add(Me.ListBoxID)
         Me.Controls.Add(Me.LabelEE)
         Me.Controls.Add(Me.LabelPrenom)
         Me.Controls.Add(Me.LabelNom)
@@ -201,6 +235,7 @@ Partial Class FormEtat
         Me.Controls.Add(Me.LabelEtatActuel)
         Me.Name = "FormEtat"
         Me.Text = "Etat Actuel"
+        Me.PanelListBox.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -220,4 +255,7 @@ Partial Class FormEtat
     Friend WithEvents ListBoxEOF As ListBox
     Friend WithEvents LabelEOF As Label
     Friend WithEvents ButtonBack As Button
+    Friend WithEvents LabelNbCand As Label
+    Friend WithEvents LabelInfoCand As Label
+    Friend WithEvents PanelListBox As Panel
 End Class
