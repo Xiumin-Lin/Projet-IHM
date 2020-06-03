@@ -9,13 +9,12 @@
     Private Sub FormModifSupp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If listCandidat.Count <> 0 Then
             For Each kval As KeyValuePair(Of Integer, Candidat) In listCandidat
-                ComboBoxIdCand.Items.Add(kval.Key.ToString + " - " + kval.Value.Nom + " " + kval.Value.Prenom)
+                ComboBoxIdCand.Items.Add(kval.Value.Nom + " " + kval.Value.Prenom + " | n°" + kval.Key.ToString)
             Next
         Else
-            MsgBox("Il y a aucun candidat inscrit ! Le bouton Valider est désactiver", MsgBoxStyle.Exclamation)
+            MsgBox("Il y a aucun candidat inscrit ! Le bouton 'Valider' est désactiver", MsgBoxStyle.Exclamation)
             ButtonValider.Enabled = False
         End If
-        ComboBoxIdCand.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 
     Private Sub RadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonNumCand.CheckedChanged, RadioButtonIDCand.CheckedChanged
@@ -61,21 +60,29 @@
                 End If
             Else
                 MsgBox("Le candidat n°" + TextBoxNumCand.Text + " n'est pas présent dans la liste des candidats enregistrés !",
-        MsgBoxStyle.Exclamation)
+                        MsgBoxStyle.Exclamation)
                 Exit Sub
             End If
 
         Else 'acces par identifiant du candidat
-            If ComboBoxIdCand.Text = "" Then
+            If ComboBoxIdCand.Text = "" Or Not ComboBoxIdCand.Items.Contains(ComboBoxIdCand.Text) Then
                 LabelIDCandidat.ForeColor = Color.Red
+                MsgBox("Entrée Invalide ! Le candidat que vous avez saisie n'est pas présent dans la liste des candidats",
+                       MsgBoxStyle.Exclamation)
                 Exit Sub
             End If
 
-            If etatModif Then 'Formulaire en mode modification
-                FormInscripInfoCandidat.numCandidat = Integer.Parse(ComboBoxIdCand.Text.First)
-            Else 'Formulaire en mode suppression
-                FormRecap.etatSupp = True
-                FormRecap.numCandidat = Integer.Parse(ComboBoxIdCand.Text.First)
+            Dim num As Integer = ExtraireNumCandidat(ComboBoxIdCand.Text)
+            If num > 0 And listCandidat.ContainsKey(num) Then
+                If etatModif Then 'Formulaire en mode modification
+                    FormInscripInfoCandidat.numCandidat = num
+                Else 'Formulaire en mode suppression
+                    FormRecap.etatSupp = True
+                    FormRecap.numCandidat = num
+                End If
+            Else
+                MsgBox("Erreur, num de candidat invalide") 'Normalement on arrive jamais à ce condition "else" 
+                Exit Sub
             End If
         End If
 
@@ -87,7 +94,7 @@
         Me.Close()
     End Sub
 
-    Private Sub ComboBox_TextBox_Changed(sender As Object, e As EventArgs) Handles ComboBoxIdCand.SelectedIndexChanged, TextBoxNumCand.TextChanged
+    Private Sub ComboBox_TextBox_Changed(sender As Object, e As EventArgs) Handles ComboBoxIdCand.GotFocus, TextBoxNumCand.TextChanged
         LabelNumCandidat.ForeColor = Label.DefaultForeColor
         LabelIDCandidat.ForeColor = Label.DefaultForeColor
     End Sub

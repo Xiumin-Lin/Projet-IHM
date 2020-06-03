@@ -73,13 +73,14 @@ Partial Class FormRecap
         Me.LabelRecap.Location = New System.Drawing.Point(186, 27)
         Me.LabelRecap.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelRecap.Name = "LabelRecap"
-        Me.LabelRecap.Size = New System.Drawing.Size(409, 42)
+        Me.LabelRecap.Size = New System.Drawing.Size(452, 42)
         Me.LabelRecap.TabIndex = 0
         Me.LabelRecap.Text = "Récapitulatif du Candidat"
         Me.LabelRecap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ButtonValider
         '
+        Me.ButtonValider.BackColor = System.Drawing.Color.Azure
         Me.ButtonValider.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonValider.Location = New System.Drawing.Point(442, 497)
         Me.ButtonValider.Margin = New System.Windows.Forms.Padding(4)
@@ -87,11 +88,12 @@ Partial Class FormRecap
         Me.ButtonValider.Size = New System.Drawing.Size(133, 68)
         Me.ButtonValider.TabIndex = 7
         Me.ButtonValider.Text = "Valider "
-        Me.ButtonValider.UseVisualStyleBackColor = True
+        Me.ButtonValider.UseVisualStyleBackColor = False
         Me.ButtonValider.Visible = False
         '
         'ButtonAnnuler
         '
+        Me.ButtonAnnuler.BackColor = System.Drawing.Color.Azure
         Me.ButtonAnnuler.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonAnnuler.Location = New System.Drawing.Point(77, 497)
         Me.ButtonAnnuler.Margin = New System.Windows.Forms.Padding(4)
@@ -99,19 +101,20 @@ Partial Class FormRecap
         Me.ButtonAnnuler.Size = New System.Drawing.Size(133, 68)
         Me.ButtonAnnuler.TabIndex = 5
         Me.ButtonAnnuler.Text = "Annuler"
-        Me.ButtonAnnuler.UseVisualStyleBackColor = True
+        Me.ButtonAnnuler.UseVisualStyleBackColor = False
         Me.ButtonAnnuler.Visible = False
         '
         'ButtonModif
         '
+        Me.ButtonModif.BackColor = System.Drawing.Color.Azure
         Me.ButtonModif.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonModif.Location = New System.Drawing.Point(262, 497)
+        Me.ButtonModif.Location = New System.Drawing.Point(253, 497)
         Me.ButtonModif.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonModif.Name = "ButtonModif"
         Me.ButtonModif.Size = New System.Drawing.Size(133, 68)
         Me.ButtonModif.TabIndex = 6
         Me.ButtonModif.Text = "Modifier"
-        Me.ButtonModif.UseVisualStyleBackColor = True
+        Me.ButtonModif.UseVisualStyleBackColor = False
         Me.ButtonModif.Visible = False
         '
         'LabelNom
@@ -264,6 +267,7 @@ Partial Class FormRecap
         '
         'GroupBoxInfoCandidat
         '
+        Me.GroupBoxInfoCandidat.BackColor = System.Drawing.Color.Cornsilk
         Me.GroupBoxInfoCandidat.Controls.Add(Me.LabelNom)
         Me.GroupBoxInfoCandidat.Controls.Add(Me.LabelAge)
         Me.GroupBoxInfoCandidat.Controls.Add(Me.LabelPrenom)
@@ -278,18 +282,20 @@ Partial Class FormRecap
         Me.GroupBoxInfoCandidat.Controls.Add(Me.LabelInfoPrenom)
         Me.GroupBoxInfoCandidat.Location = New System.Drawing.Point(52, 147)
         Me.GroupBoxInfoCandidat.Name = "GroupBoxInfoCandidat"
-        Me.GroupBoxInfoCandidat.Size = New System.Drawing.Size(315, 317)
+        Me.GroupBoxInfoCandidat.Size = New System.Drawing.Size(334, 317)
         Me.GroupBoxInfoCandidat.TabIndex = 1
         Me.GroupBoxInfoCandidat.TabStop = False
         Me.GroupBoxInfoCandidat.Text = "Information"
         '
         'GroupBoxInfoEEcrites
         '
+        Me.GroupBoxInfoEEcrites.BackColor = System.Drawing.Color.Cornsilk
         Me.GroupBoxInfoEEcrites.Controls.Add(Me.LabelEE4)
         Me.GroupBoxInfoEEcrites.Controls.Add(Me.LabelEE3)
         Me.GroupBoxInfoEEcrites.Controls.Add(Me.LabelEE2)
         Me.GroupBoxInfoEEcrites.Controls.Add(Me.LabelEE1)
-        Me.GroupBoxInfoEEcrites.Location = New System.Drawing.Point(396, 147)
+        Me.GroupBoxInfoEEcrites.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.GroupBoxInfoEEcrites.Location = New System.Drawing.Point(410, 147)
         Me.GroupBoxInfoEEcrites.Name = "GroupBoxInfoEEcrites"
         Me.GroupBoxInfoEEcrites.Size = New System.Drawing.Size(369, 119)
         Me.GroupBoxInfoEEcrites.TabIndex = 2
@@ -338,10 +344,11 @@ Partial Class FormRecap
         '
         'GroupBoxInfoEOrales
         '
+        Me.GroupBoxInfoEOrales.BackColor = System.Drawing.Color.Cornsilk
         Me.GroupBoxInfoEOrales.Controls.Add(Me.LabelEO3)
         Me.GroupBoxInfoEOrales.Controls.Add(Me.LabelEO2)
         Me.GroupBoxInfoEOrales.Controls.Add(Me.LabelEO1)
-        Me.GroupBoxInfoEOrales.Location = New System.Drawing.Point(396, 277)
+        Me.GroupBoxInfoEOrales.Location = New System.Drawing.Point(410, 277)
         Me.GroupBoxInfoEOrales.Name = "GroupBoxInfoEOrales"
         Me.GroupBoxInfoEOrales.Size = New System.Drawing.Size(369, 103)
         Me.GroupBoxInfoEOrales.TabIndex = 3
@@ -380,8 +387,9 @@ Partial Class FormRecap
         '
         'GroupBoxInfoEOF
         '
+        Me.GroupBoxInfoEOF.BackColor = System.Drawing.Color.Cornsilk
         Me.GroupBoxInfoEOF.Controls.Add(Me.LabelEOF)
-        Me.GroupBoxInfoEOF.Location = New System.Drawing.Point(396, 392)
+        Me.GroupBoxInfoEOF.Location = New System.Drawing.Point(410, 392)
         Me.GroupBoxInfoEOF.Name = "GroupBoxInfoEOF"
         Me.GroupBoxInfoEOF.Size = New System.Drawing.Size(369, 72)
         Me.GroupBoxInfoEOF.TabIndex = 4
@@ -401,6 +409,7 @@ Partial Class FormRecap
         '
         'ButtonSupp
         '
+        Me.ButtonSupp.BackColor = System.Drawing.Color.Azure
         Me.ButtonSupp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonSupp.Location = New System.Drawing.Point(623, 497)
         Me.ButtonSupp.Margin = New System.Windows.Forms.Padding(4)
@@ -408,7 +417,7 @@ Partial Class FormRecap
         Me.ButtonSupp.Size = New System.Drawing.Size(133, 68)
         Me.ButtonSupp.TabIndex = 8
         Me.ButtonSupp.Text = "Valider Suppression"
-        Me.ButtonSupp.UseVisualStyleBackColor = True
+        Me.ButtonSupp.UseVisualStyleBackColor = False
         Me.ButtonSupp.Visible = False
         '
         'LabelInfoRegion
@@ -427,6 +436,7 @@ Partial Class FormRecap
         'LabelRegion
         '
         Me.LabelRegion.AutoSize = True
+        Me.LabelRegion.BackColor = System.Drawing.Color.Cornsilk
         Me.LabelRegion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelRegion.Location = New System.Drawing.Point(7, 15)
         Me.LabelRegion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
@@ -438,6 +448,7 @@ Partial Class FormRecap
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.Cornsilk
         Me.Panel1.Controls.Add(Me.LabelInfoRegion)
         Me.Panel1.Controls.Add(Me.LabelRegion)
         Me.Panel1.Location = New System.Drawing.Point(214, 85)
@@ -447,6 +458,7 @@ Partial Class FormRecap
         '
         'GroupBoxNum
         '
+        Me.GroupBoxNum.BackColor = System.Drawing.Color.Cornsilk
         Me.GroupBoxNum.Controls.Add(Me.LabelInfoNum)
         Me.GroupBoxNum.Location = New System.Drawing.Point(52, 72)
         Me.GroupBoxNum.Name = "GroupBoxNum"
@@ -469,6 +481,7 @@ Partial Class FormRecap
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ClientSize = New System.Drawing.Size(814, 606)
         Me.Controls.Add(Me.GroupBoxNum)
         Me.Controls.Add(Me.ButtonSupp)

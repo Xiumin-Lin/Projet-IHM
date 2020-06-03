@@ -30,8 +30,6 @@
     Private Sub ButtonBilanProv_Click(sender As Object, e As EventArgs) Handles ButtonBilanProv.Click
         With FormBilan
             .LabelBilan.Text = "Bilan Provisoire"
-            .ButtonBack.Visible = True
-            .ButtonCloseApp.Visible = False
             .Show()
         End With
         Me.Hide()
@@ -45,5 +43,9 @@
             .Show()
         End With
         Me.Hide()
+    End Sub
+
+    Private Sub ButtonClose_Click(sender As Object, e As EventArgs) Handles ButtonClose.Click
+        Me.Close()
     End Sub
 End Class

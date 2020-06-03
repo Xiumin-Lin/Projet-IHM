@@ -217,10 +217,8 @@
         Else
             candInscrit.Region = ComboBoxRegion.Text
             If RadioButtonNon.Checked Then
-                FormRecap.GroupBoxInfoEOF.Visible = False
                 candInscrit.EOF = String.Empty
             Else
-                FormRecap.GroupBoxInfoEOF.Visible = True
                 candInscrit.EOF = ComboBoxEFacultative.Text
             End If
 

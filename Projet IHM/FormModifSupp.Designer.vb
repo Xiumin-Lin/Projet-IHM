@@ -41,21 +41,23 @@ Partial Class FormModifSupp
         '
         'ButtonAnnuler
         '
-        Me.ButtonAnnuler.Location = New System.Drawing.Point(107, 317)
+        Me.ButtonAnnuler.BackColor = System.Drawing.Color.Azure
+        Me.ButtonAnnuler.Location = New System.Drawing.Point(107, 331)
         Me.ButtonAnnuler.Name = "ButtonAnnuler"
         Me.ButtonAnnuler.Size = New System.Drawing.Size(112, 45)
         Me.ButtonAnnuler.TabIndex = 7
         Me.ButtonAnnuler.Text = "Annuler"
-        Me.ButtonAnnuler.UseVisualStyleBackColor = True
+        Me.ButtonAnnuler.UseVisualStyleBackColor = False
         '
         'ButtonValider
         '
-        Me.ButtonValider.Location = New System.Drawing.Point(351, 317)
+        Me.ButtonValider.BackColor = System.Drawing.Color.Azure
+        Me.ButtonValider.Location = New System.Drawing.Point(402, 331)
         Me.ButtonValider.Name = "ButtonValider"
         Me.ButtonValider.Size = New System.Drawing.Size(112, 45)
         Me.ButtonValider.TabIndex = 8
         Me.ButtonValider.Text = "Valider"
-        Me.ButtonValider.UseVisualStyleBackColor = True
+        Me.ButtonValider.UseVisualStyleBackColor = False
         '
         'PanelID
         '
@@ -64,15 +66,17 @@ Partial Class FormModifSupp
         Me.PanelID.Enabled = False
         Me.PanelID.Location = New System.Drawing.Point(107, 237)
         Me.PanelID.Name = "PanelID"
-        Me.PanelID.Size = New System.Drawing.Size(356, 74)
+        Me.PanelID.Size = New System.Drawing.Size(407, 74)
         Me.PanelID.TabIndex = 28
         '
         'ComboBoxIdCand
         '
+        Me.ComboBoxIdCand.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ComboBoxIdCand.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBoxIdCand.FormattingEnabled = True
         Me.ComboBoxIdCand.Location = New System.Drawing.Point(9, 34)
         Me.ComboBoxIdCand.Name = "ComboBoxIdCand"
-        Me.ComboBoxIdCand.Size = New System.Drawing.Size(331, 28)
+        Me.ComboBoxIdCand.Size = New System.Drawing.Size(388, 28)
         Me.ComboBoxIdCand.TabIndex = 9
         '
         'LabelIDCandidat
@@ -91,14 +95,14 @@ Partial Class FormModifSupp
         Me.PanelNum.Enabled = False
         Me.PanelNum.Location = New System.Drawing.Point(107, 138)
         Me.PanelNum.Name = "PanelNum"
-        Me.PanelNum.Size = New System.Drawing.Size(356, 75)
+        Me.PanelNum.Size = New System.Drawing.Size(407, 75)
         Me.PanelNum.TabIndex = 27
         '
         'TextBoxNumCand
         '
         Me.TextBoxNumCand.Location = New System.Drawing.Point(11, 36)
         Me.TextBoxNumCand.Name = "TextBoxNumCand"
-        Me.TextBoxNumCand.Size = New System.Drawing.Size(329, 27)
+        Me.TextBoxNumCand.Size = New System.Drawing.Size(386, 27)
         Me.TextBoxNumCand.TabIndex = 10
         '
         'LabelNumCandidat
@@ -134,7 +138,7 @@ Partial Class FormModifSupp
         '
         Me.LabelOu.Location = New System.Drawing.Point(107, 216)
         Me.LabelOu.Name = "LabelOu"
-        Me.LabelOu.Size = New System.Drawing.Size(356, 18)
+        Me.LabelOu.Size = New System.Drawing.Size(400, 18)
         Me.LabelOu.TabIndex = 24
         Me.LabelOu.Text = "OU"
         Me.LabelOu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -142,7 +146,7 @@ Partial Class FormModifSupp
         'LabelIndication
         '
         Me.LabelIndication.AutoSize = True
-        Me.LabelIndication.Location = New System.Drawing.Point(37, 107)
+        Me.LabelIndication.Location = New System.Drawing.Point(59, 103)
         Me.LabelIndication.Name = "LabelIndication"
         Me.LabelIndication.Size = New System.Drawing.Size(500, 20)
         Me.LabelIndication.TabIndex = 23
@@ -156,7 +160,7 @@ Partial Class FormModifSupp
         Me.LabelTitre.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelTitre.Location = New System.Drawing.Point(12, 24)
         Me.LabelTitre.Name = "LabelTitre"
-        Me.LabelTitre.Size = New System.Drawing.Size(549, 57)
+        Me.LabelTitre.Size = New System.Drawing.Size(586, 62)
         Me.LabelTitre.TabIndex = 22
         Me.LabelTitre.Text = "Modification/Suppression"
         Me.LabelTitre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -165,7 +169,8 @@ Partial Class FormModifSupp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(573, 402)
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.ClientSize = New System.Drawing.Size(610, 416)
         Me.Controls.Add(Me.PanelID)
         Me.Controls.Add(Me.PanelNum)
         Me.Controls.Add(Me.RadioButtonIDCand)

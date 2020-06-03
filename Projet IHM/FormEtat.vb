@@ -13,8 +13,9 @@
                     cpt += 1                            'cette boucle s'arrete forcément à un moment
                 End While
                 If Not String.IsNullOrEmpty(Strings.Right(c, cpt - 1)) Then
-                    With listCandidat(Strings.Right(c, cpt - 1))
-                        ListBoxID.Items.Add(Strings.Right(c, cpt - 1))
+                    Dim idxCand As Integer = Integer.Parse(Strings.Right(c, cpt - 1))
+                    With listCandidat(idxCand)
+                        ListBoxID.Items.Add(idxCand)
                         ListBoxNom.Items.Add(.Nom)
                         ListBoxPrenom.Items.Add(.Prenom)
                         Dim s As String = ""
@@ -71,6 +72,4 @@
         Me.Close()
         FormAccueil.Show()
     End Sub
-
-
 End Class

@@ -121,6 +121,7 @@ Partial Class FormInscripChoixEpreuves
         '
         'GroupBoxCandidat
         '
+        Me.GroupBoxCandidat.BackColor = System.Drawing.Color.AliceBlue
         Me.GroupBoxCandidat.Controls.Add(Me.LabelNom)
         Me.GroupBoxCandidat.Controls.Add(Me.LabelPrenom)
         Me.GroupBoxCandidat.Location = New System.Drawing.Point(30, 29)
@@ -132,6 +133,7 @@ Partial Class FormInscripChoixEpreuves
         '
         'GroupBoxEcrit
         '
+        Me.GroupBoxEcrit.BackColor = System.Drawing.Color.AliceBlue
         Me.GroupBoxEcrit.Controls.Add(Me.CheckBoxMaths)
         Me.GroupBoxEcrit.Controls.Add(Me.CheckBoxExp)
         Me.GroupBoxEcrit.Controls.Add(Me.CheckBoxSys)
@@ -274,6 +276,7 @@ Partial Class FormInscripChoixEpreuves
         'LabelNbEERestant
         '
         Me.LabelNbEERestant.AutoSize = True
+        Me.LabelNbEERestant.BackColor = System.Drawing.Color.AliceBlue
         Me.LabelNbEERestant.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelNbEERestant.Location = New System.Drawing.Point(12, 228)
         Me.LabelNbEERestant.Name = "LabelNbEERestant"
@@ -284,6 +287,7 @@ Partial Class FormInscripChoixEpreuves
         '
         'GroupBoxOral
         '
+        Me.GroupBoxOral.BackColor = System.Drawing.Color.AliceBlue
         Me.GroupBoxOral.Controls.Add(Me.CheckBoxMathsO)
         Me.GroupBoxOral.Controls.Add(Me.CheckBoxExpO)
         Me.GroupBoxOral.Controls.Add(Me.CheckBoxSysO)
@@ -433,6 +437,7 @@ Partial Class FormInscripChoixEpreuves
         '
         'GroupBoxEFacultative
         '
+        Me.GroupBoxEFacultative.BackColor = System.Drawing.Color.AliceBlue
         Me.GroupBoxEFacultative.Controls.Add(Me.LabelInfoEFacultative)
         Me.GroupBoxEFacultative.Controls.Add(Me.ComboBoxEFacultative)
         Me.GroupBoxEFacultative.Controls.Add(Me.RadioButtonNon)
@@ -447,21 +452,23 @@ Partial Class FormInscripChoixEpreuves
         '
         'ButtonAnnuler
         '
+        Me.ButtonAnnuler.BackColor = System.Drawing.Color.Azure
         Me.ButtonAnnuler.Location = New System.Drawing.Point(262, 525)
         Me.ButtonAnnuler.Name = "ButtonAnnuler"
         Me.ButtonAnnuler.Size = New System.Drawing.Size(179, 59)
         Me.ButtonAnnuler.TabIndex = 9
         Me.ButtonAnnuler.Text = "Abandonner"
-        Me.ButtonAnnuler.UseVisualStyleBackColor = True
+        Me.ButtonAnnuler.UseVisualStyleBackColor = False
         '
         'ButtonValidChoixEp
         '
+        Me.ButtonValidChoixEp.BackColor = System.Drawing.Color.Azure
         Me.ButtonValidChoixEp.Location = New System.Drawing.Point(628, 525)
         Me.ButtonValidChoixEp.Name = "ButtonValidChoixEp"
         Me.ButtonValidChoixEp.Size = New System.Drawing.Size(179, 59)
         Me.ButtonValidChoixEp.TabIndex = 10
         Me.ButtonValidChoixEp.Text = "Valider Enregistrement"
-        Me.ButtonValidChoixEp.UseVisualStyleBackColor = True
+        Me.ButtonValidChoixEp.UseVisualStyleBackColor = False
         '
         'Timer1min30
         '
@@ -469,6 +476,7 @@ Partial Class FormInscripChoixEpreuves
         'LabelNbEORestant
         '
         Me.LabelNbEORestant.AutoSize = True
+        Me.LabelNbEORestant.BackColor = System.Drawing.Color.AliceBlue
         Me.LabelNbEORestant.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelNbEORestant.Location = New System.Drawing.Point(12, 414)
         Me.LabelNbEORestant.Name = "LabelNbEORestant"
@@ -481,6 +489,7 @@ Partial Class FormInscripChoixEpreuves
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ClientSize = New System.Drawing.Size(1046, 598)
         Me.Controls.Add(Me.LabelNbEERestant)
         Me.Controls.Add(Me.LabelNbEORestant)

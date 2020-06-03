@@ -1,9 +1,14 @@
 ﻿Public Class FormRecap
+    'Ce formulaire récapitule les infos d'un candidat
+    'Les boutons permettant de naviguer entre les autres form diffère selon l'état du form
+    '- A l'état d'inscription, seuls les boutons annuler (retour à l'accueil), modifier et valider sont dispo
+    '- A l'état de suppression, seul le bouton validant la suppression est present
+    '- Si on est ni a l'état inscription ni à la supression, le form est alors à l'état Bilan, seuls le bouton fermer sera dispo (sans retour a l'accueil)
     Public etatInscription As Boolean = False
     Public etatSupp As Boolean = False
     Public numCandidat As Integer
     Private Sub FormRecap_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If etatSupp = True Then
+        If etatInscription = False Then
             candInscrit = listCandidat(numCandidat)
         End If
         'Init Info Candidat
@@ -16,7 +21,10 @@
             LabelInfoCP.Text = .CP
             LabelInfoVille.Text = .Ville
             LabelInfoRegion.Text = .Region
-            LabelEOF.Text = .EOF
+            If .EOF <> "" Then
+                GroupBoxInfoEOF.Visible = True
+                LabelEOF.Text = .EOF
+            End If
             Dim cpt As Integer = 0
             For Each l As Label In GroupBoxInfoEEcrites.Controls
                 l.Text = .EE(cpt)

@@ -161,11 +161,12 @@ Partial Class FormInscripInfoCandidat
         'LabelInfoAge
         '
         Me.LabelInfoAge.AutoSize = True
+        Me.LabelInfoAge.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelInfoAge.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelInfoAge.Location = New System.Drawing.Point(109, 205)
         Me.LabelInfoAge.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelInfoAge.Name = "LabelInfoAge"
-        Me.LabelInfoAge.Size = New System.Drawing.Size(36, 20)
+        Me.LabelInfoAge.Size = New System.Drawing.Size(38, 22)
         Me.LabelInfoAge.TabIndex = 6
         Me.LabelInfoAge.Text = "???"
         Me.LabelInfoAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -205,6 +206,7 @@ Partial Class FormInscripInfoCandidat
         '
         'ButtonAbandon
         '
+        Me.ButtonAbandon.BackColor = System.Drawing.Color.Azure
         Me.ButtonAbandon.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonAbandon.Location = New System.Drawing.Point(207, 325)
         Me.ButtonAbandon.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
@@ -212,10 +214,11 @@ Partial Class FormInscripInfoCandidat
         Me.ButtonAbandon.Size = New System.Drawing.Size(151, 54)
         Me.ButtonAbandon.TabIndex = 14
         Me.ButtonAbandon.Text = "Abandonner"
-        Me.ButtonAbandon.UseVisualStyleBackColor = True
+        Me.ButtonAbandon.UseVisualStyleBackColor = False
         '
         'ButtonSuivant
         '
+        Me.ButtonSuivant.BackColor = System.Drawing.Color.Azure
         Me.ButtonSuivant.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonSuivant.Location = New System.Drawing.Point(475, 325)
         Me.ButtonSuivant.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
@@ -223,7 +226,7 @@ Partial Class FormInscripInfoCandidat
         Me.ButtonSuivant.Size = New System.Drawing.Size(151, 54)
         Me.ButtonSuivant.TabIndex = 15
         Me.ButtonSuivant.Text = "Suivant"
-        Me.ButtonSuivant.UseVisualStyleBackColor = True
+        Me.ButtonSuivant.UseVisualStyleBackColor = False
         '
         'Timer1min
         '
@@ -256,6 +259,7 @@ Partial Class FormInscripInfoCandidat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ClientSize = New System.Drawing.Size(792, 408)
         Me.Controls.Add(Me.LabelAgeMax)
         Me.Controls.Add(Me.LabelAgeMin)

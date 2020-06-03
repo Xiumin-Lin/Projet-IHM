@@ -29,7 +29,7 @@ Partial Class FormBilan
         Me.ComboBoxNomPrenom = New System.Windows.Forms.ComboBox()
         Me.ButtonShowCand = New System.Windows.Forms.Button()
         Me.ButtonShowMatiere = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxMatiere = New System.Windows.Forms.ComboBox()
         Me.LabelMatiere = New System.Windows.Forms.Label()
         Me.ButtonBack = New System.Windows.Forms.Button()
         Me.ButtonCloseApp = New System.Windows.Forms.Button()
@@ -78,41 +78,48 @@ Partial Class FormBilan
         '
         'ComboBoxNomPrenom
         '
+        Me.ComboBoxNomPrenom.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ComboBoxNomPrenom.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBoxNomPrenom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
         Me.ComboBoxNomPrenom.FormattingEnabled = True
         Me.ComboBoxNomPrenom.Location = New System.Drawing.Point(58, 185)
         Me.ComboBoxNomPrenom.Name = "ComboBoxNomPrenom"
-        Me.ComboBoxNomPrenom.Size = New System.Drawing.Size(259, 28)
+        Me.ComboBoxNomPrenom.Size = New System.Drawing.Size(363, 28)
         Me.ComboBoxNomPrenom.TabIndex = 8
         '
         'ButtonShowCand
         '
+        Me.ButtonShowCand.BackColor = System.Drawing.Color.Azure
         Me.ButtonShowCand.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.ButtonShowCand.Location = New System.Drawing.Point(422, 158)
+        Me.ButtonShowCand.Location = New System.Drawing.Point(472, 170)
         Me.ButtonShowCand.Name = "ButtonShowCand"
         Me.ButtonShowCand.Size = New System.Drawing.Size(130, 57)
         Me.ButtonShowCand.TabIndex = 9
         Me.ButtonShowCand.Text = "Afficher Candidat"
-        Me.ButtonShowCand.UseVisualStyleBackColor = True
+        Me.ButtonShowCand.UseVisualStyleBackColor = False
         '
         'ButtonShowMatiere
         '
+        Me.ButtonShowMatiere.BackColor = System.Drawing.Color.Azure
         Me.ButtonShowMatiere.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.ButtonShowMatiere.Location = New System.Drawing.Point(422, 252)
+        Me.ButtonShowMatiere.Location = New System.Drawing.Point(472, 264)
         Me.ButtonShowMatiere.Name = "ButtonShowMatiere"
         Me.ButtonShowMatiere.Size = New System.Drawing.Size(130, 57)
         Me.ButtonShowMatiere.TabIndex = 12
         Me.ButtonShowMatiere.Text = "Afficher Matière"
-        Me.ButtonShowMatiere.UseVisualStyleBackColor = True
+        Me.ButtonShowMatiere.UseVisualStyleBackColor = False
         '
-        'ComboBox1
+        'ComboBoxMatiere
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(58, 279)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(259, 28)
-        Me.ComboBox1.TabIndex = 11
+        Me.ComboBoxMatiere.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.ComboBoxMatiere.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboBoxMatiere.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxMatiere.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
+        Me.ComboBoxMatiere.FormattingEnabled = True
+        Me.ComboBoxMatiere.Location = New System.Drawing.Point(58, 279)
+        Me.ComboBoxMatiere.Name = "ComboBoxMatiere"
+        Me.ComboBoxMatiere.Size = New System.Drawing.Size(363, 28)
+        Me.ComboBoxMatiere.TabIndex = 11
         '
         'LabelMatiere
         '
@@ -126,33 +133,37 @@ Partial Class FormBilan
         '
         'ButtonBack
         '
+        Me.ButtonBack.BackColor = System.Drawing.Color.Azure
         Me.ButtonBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
         Me.ButtonBack.Location = New System.Drawing.Point(59, 360)
         Me.ButtonBack.Name = "ButtonBack"
         Me.ButtonBack.Size = New System.Drawing.Size(130, 39)
         Me.ButtonBack.TabIndex = 13
         Me.ButtonBack.Text = "Retour"
-        Me.ButtonBack.UseVisualStyleBackColor = True
+        Me.ButtonBack.UseVisualStyleBackColor = False
         '
         'ButtonCloseApp
         '
+        Me.ButtonCloseApp.BackColor = System.Drawing.Color.Azure
         Me.ButtonCloseApp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
         Me.ButtonCloseApp.Location = New System.Drawing.Point(250, 350)
         Me.ButtonCloseApp.Name = "ButtonCloseApp"
         Me.ButtonCloseApp.Size = New System.Drawing.Size(130, 59)
         Me.ButtonCloseApp.TabIndex = 14
         Me.ButtonCloseApp.Text = "Fermez l'application"
-        Me.ButtonCloseApp.UseVisualStyleBackColor = True
+        Me.ButtonCloseApp.UseVisualStyleBackColor = False
+        Me.ButtonCloseApp.Visible = False
         '
         'FormBilan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(609, 452)
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.ClientSize = New System.Drawing.Size(649, 452)
         Me.Controls.Add(Me.ButtonCloseApp)
         Me.Controls.Add(Me.ButtonBack)
         Me.Controls.Add(Me.ButtonShowMatiere)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.ComboBoxMatiere)
         Me.Controls.Add(Me.LabelMatiere)
         Me.Controls.Add(Me.ButtonShowCand)
         Me.Controls.Add(Me.ComboBoxNomPrenom)
@@ -174,7 +185,7 @@ Partial Class FormBilan
     Friend WithEvents ComboBoxNomPrenom As ComboBox
     Friend WithEvents ButtonShowCand As Button
     Friend WithEvents ButtonShowMatiere As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBoxMatiere As ComboBox
     Friend WithEvents LabelMatiere As Label
     Friend WithEvents ButtonBack As Button
     Friend WithEvents ButtonCloseApp As Button
