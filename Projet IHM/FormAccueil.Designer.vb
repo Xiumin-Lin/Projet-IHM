@@ -121,9 +121,9 @@ Partial Class FormAccueil
         'ButtonClose
         '
         Me.ButtonClose.BackColor = System.Drawing.Color.Azure
-        Me.ButtonClose.Location = New System.Drawing.Point(297, 335)
+        Me.ButtonClose.Location = New System.Drawing.Point(297, 328)
         Me.ButtonClose.Name = "ButtonClose"
-        Me.ButtonClose.Size = New System.Drawing.Size(85, 35)
+        Me.ButtonClose.Size = New System.Drawing.Size(85, 42)
         Me.ButtonClose.TabIndex = 7
         Me.ButtonClose.Text = "Fermer"
         Me.ButtonClose.UseVisualStyleBackColor = False

@@ -451,9 +451,9 @@ Partial Class FormRecap
         Me.Panel1.BackColor = System.Drawing.Color.Cornsilk
         Me.Panel1.Controls.Add(Me.LabelInfoRegion)
         Me.Panel1.Controls.Add(Me.LabelRegion)
-        Me.Panel1.Location = New System.Drawing.Point(214, 85)
+        Me.Panel1.Location = New System.Drawing.Point(214, 83)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(351, 47)
+        Me.Panel1.Size = New System.Drawing.Size(351, 49)
         Me.Panel1.TabIndex = 0
         '
         'GroupBoxNum

@@ -1,4 +1,6 @@
 ﻿Public Class FormBilanMatiere
+    Private ReadOnly O As String = "OUI"
+    Private ReadOnly N As String = "NON"
 
     Private Sub FormBilanMatiere_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim listEluTrié As List(Of String) = New List(Of String)
@@ -6,12 +8,14 @@
         For Each kval As KeyValuePair(Of Integer, Candidat) In listCandidat
             If kval.Value.EOF.Equals(LabelMatiere.Text) Or kval.Value.EE.Contains(LabelMatiere.Text) Or kval.Value.EO.Contains(LabelMatiere.Text) Then
                 listEluTrié.Add(kval.Value.Region + kval.Value.Nom + kval.Value.Prenom + kval.Key.ToString)
+
             End If
         Next
         listEluTrié.Sort()
 
         'On ajoute les données des candidats dans les différentes ListBox
         For Each c As String In listEluTrié
+            MsgBox(c)
             Dim num As Integer = ExtraireNumCandidat(c)
             If num > 0 Then
                 With listCandidat(num)
@@ -20,14 +24,14 @@
                     ListBoxNom.Items.Add(.Nom)
                     ListBoxPrenom.Items.Add(.Prenom)
                     If .EE.Contains(LabelMatiere.Text) Then
-                        ListBoxEE.Items.Add("OUI")
+                        ListBoxEE.Items.Add(O)
                     Else
-                        ListBoxEE.Items.Add("NON")
+                        ListBoxEE.Items.Add(N)
                     End If
                     If .EO.Contains(LabelMatiere.Text) Or .EOF.Equals(LabelMatiere.Text) Then
-                        ListBoxEO.Items.Add("OUI")
+                        ListBoxEO.Items.Add(O)
                     Else
-                        ListBoxEO.Items.Add("NON")
+                        ListBoxEO.Items.Add(N)
                     End If
                 End With
             End If

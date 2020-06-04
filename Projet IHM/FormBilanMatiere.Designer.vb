@@ -38,6 +38,7 @@ Partial Class FormBilanMatiere
         Me.ListBoxRegion = New System.Windows.Forms.ListBox()
         Me.LabelRegion = New System.Windows.Forms.Label()
         Me.PanelListBox = New System.Windows.Forms.Panel()
+        Me.LabelMat = New System.Windows.Forms.Label()
         Me.PanelListBox.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -54,22 +55,23 @@ Partial Class FormBilanMatiere
         '
         'LabelMatiere
         '
+        Me.LabelMatiere.AutoSize = True
         Me.LabelMatiere.BackColor = System.Drawing.Color.Honeydew
         Me.LabelMatiere.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelMatiere.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.2!)
-        Me.LabelMatiere.Location = New System.Drawing.Point(290, 84)
+        Me.LabelMatiere.Location = New System.Drawing.Point(413, 84)
         Me.LabelMatiere.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelMatiere.Name = "LabelMatiere"
-        Me.LabelMatiere.Size = New System.Drawing.Size(174, 43)
+        Me.LabelMatiere.Size = New System.Drawing.Size(57, 32)
         Me.LabelMatiere.TabIndex = 6
-        Me.LabelMatiere.Text = "Matière : ???"
+        Me.LabelMatiere.Text = "???"
         Me.LabelMatiere.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LabelID
         '
         Me.LabelID.AutoSize = True
         Me.LabelID.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.LabelID.Location = New System.Drawing.Point(207, 151)
+        Me.LabelID.Location = New System.Drawing.Point(43, 151)
         Me.LabelID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelID.Name = "LabelID"
         Me.LabelID.Size = New System.Drawing.Size(28, 20)
@@ -81,7 +83,7 @@ Partial Class FormBilanMatiere
         Me.ListBoxID.BackColor = System.Drawing.Color.Cornsilk
         Me.ListBoxID.FormattingEnabled = True
         Me.ListBoxID.ItemHeight = 20
-        Me.ListBoxID.Location = New System.Drawing.Point(167, 3)
+        Me.ListBoxID.Location = New System.Drawing.Point(3, 3)
         Me.ListBoxID.Name = "ListBoxID"
         Me.ListBoxID.Size = New System.Drawing.Size(73, 224)
         Me.ListBoxID.TabIndex = 8
@@ -173,7 +175,7 @@ Partial Class FormBilanMatiere
         'ButtonClose
         '
         Me.ButtonClose.BackColor = System.Drawing.Color.Azure
-        Me.ButtonClose.Location = New System.Drawing.Point(397, 415)
+        Me.ButtonClose.Location = New System.Drawing.Point(397, 421)
         Me.ButtonClose.Name = "ButtonClose"
         Me.ButtonClose.Size = New System.Drawing.Size(152, 46)
         Me.ButtonClose.TabIndex = 17
@@ -185,7 +187,7 @@ Partial Class FormBilanMatiere
         Me.ListBoxRegion.BackColor = System.Drawing.Color.Cornsilk
         Me.ListBoxRegion.FormattingEnabled = True
         Me.ListBoxRegion.ItemHeight = 20
-        Me.ListBoxRegion.Location = New System.Drawing.Point(3, 3)
+        Me.ListBoxRegion.Location = New System.Drawing.Point(82, 3)
         Me.ListBoxRegion.Name = "ListBoxRegion"
         Me.ListBoxRegion.Size = New System.Drawing.Size(158, 224)
         Me.ListBoxRegion.TabIndex = 19
@@ -194,7 +196,7 @@ Partial Class FormBilanMatiere
         '
         Me.LabelRegion.AutoSize = True
         Me.LabelRegion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.LabelRegion.Location = New System.Drawing.Point(40, 151)
+        Me.LabelRegion.Location = New System.Drawing.Point(122, 152)
         Me.LabelRegion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelRegion.Name = "LabelRegion"
         Me.LabelRegion.Size = New System.Drawing.Size(61, 20)
@@ -214,12 +216,27 @@ Partial Class FormBilanMatiere
         Me.PanelListBox.Size = New System.Drawing.Size(830, 234)
         Me.PanelListBox.TabIndex = 20
         '
+        'LabelMat
+        '
+        Me.LabelMat.AutoSize = True
+        Me.LabelMat.BackColor = System.Drawing.Color.Honeydew
+        Me.LabelMat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.LabelMat.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.2!)
+        Me.LabelMat.Location = New System.Drawing.Point(290, 84)
+        Me.LabelMat.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LabelMat.Name = "LabelMat"
+        Me.LabelMat.Size = New System.Drawing.Size(115, 32)
+        Me.LabelMat.TabIndex = 21
+        Me.LabelMat.Text = "Matière :"
+        Me.LabelMat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'FormBilanMatiere
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ClientSize = New System.Drawing.Size(924, 479)
+        Me.Controls.Add(Me.LabelMat)
         Me.Controls.Add(Me.PanelListBox)
         Me.Controls.Add(Me.LabelRegion)
         Me.Controls.Add(Me.ButtonClose)
@@ -256,4 +273,5 @@ Partial Class FormBilanMatiere
     Friend WithEvents ListBoxRegion As ListBox
     Friend WithEvents LabelRegion As Label
     Friend WithEvents PanelListBox As Panel
+    Friend WithEvents LabelMat As Label
 End Class

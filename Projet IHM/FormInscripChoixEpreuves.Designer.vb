@@ -133,7 +133,7 @@ Partial Class FormInscripChoixEpreuves
         '
         'GroupBoxEcrit
         '
-        Me.GroupBoxEcrit.BackColor = System.Drawing.Color.AliceBlue
+        Me.GroupBoxEcrit.BackColor = System.Drawing.SystemColors.Control
         Me.GroupBoxEcrit.Controls.Add(Me.CheckBoxMaths)
         Me.GroupBoxEcrit.Controls.Add(Me.CheckBoxExp)
         Me.GroupBoxEcrit.Controls.Add(Me.CheckBoxSys)
@@ -146,6 +146,7 @@ Partial Class FormInscripChoixEpreuves
         Me.GroupBoxEcrit.Controls.Add(Me.CheckBoxGesE)
         Me.GroupBoxEcrit.Controls.Add(Me.CheckBoxBD)
         Me.GroupBoxEcrit.Controls.Add(Me.CheckBoxAlgo)
+        Me.GroupBoxEcrit.ForeColor = System.Drawing.SystemColors.ControlText
         Me.GroupBoxEcrit.Location = New System.Drawing.Point(69, 154)
         Me.GroupBoxEcrit.Name = "GroupBoxEcrit"
         Me.GroupBoxEcrit.Size = New System.Drawing.Size(921, 168)
@@ -287,7 +288,7 @@ Partial Class FormInscripChoixEpreuves
         '
         'GroupBoxOral
         '
-        Me.GroupBoxOral.BackColor = System.Drawing.Color.AliceBlue
+        Me.GroupBoxOral.BackColor = System.Drawing.SystemColors.Control
         Me.GroupBoxOral.Controls.Add(Me.CheckBoxMathsO)
         Me.GroupBoxOral.Controls.Add(Me.CheckBoxExpO)
         Me.GroupBoxOral.Controls.Add(Me.CheckBoxSysO)
@@ -437,7 +438,7 @@ Partial Class FormInscripChoixEpreuves
         '
         'GroupBoxEFacultative
         '
-        Me.GroupBoxEFacultative.BackColor = System.Drawing.Color.AliceBlue
+        Me.GroupBoxEFacultative.BackColor = System.Drawing.SystemColors.Control
         Me.GroupBoxEFacultative.Controls.Add(Me.LabelInfoEFacultative)
         Me.GroupBoxEFacultative.Controls.Add(Me.ComboBoxEFacultative)
         Me.GroupBoxEFacultative.Controls.Add(Me.RadioButtonNon)

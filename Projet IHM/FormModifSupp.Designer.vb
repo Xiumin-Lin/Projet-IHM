@@ -61,6 +61,7 @@ Partial Class FormModifSupp
         '
         'PanelID
         '
+        Me.PanelID.BackColor = System.Drawing.SystemColors.Control
         Me.PanelID.Controls.Add(Me.ComboBoxIdCand)
         Me.PanelID.Controls.Add(Me.LabelIDCandidat)
         Me.PanelID.Enabled = False
@@ -90,6 +91,7 @@ Partial Class FormModifSupp
         '
         'PanelNum
         '
+        Me.PanelNum.BackColor = System.Drawing.SystemColors.Control
         Me.PanelNum.Controls.Add(Me.TextBoxNumCand)
         Me.PanelNum.Controls.Add(Me.LabelNumCandidat)
         Me.PanelNum.Enabled = False

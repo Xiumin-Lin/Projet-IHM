@@ -1,10 +1,14 @@
-﻿Module ModuleProjetIHM
+﻿Imports System.Deployment.Application
+Imports System.Drawing.Drawing2D
+Imports System.IO
+
+Module ModuleProjetIHM
     Public Structure Candidat
         Dim Nom As String
         Dim Prenom As String
         Dim Age As Integer
         Dim Adresse As String
-        Dim CP As Integer           'Code Postal
+        Dim CP As String           'Code Postal
         Dim Ville As String
         Dim Region As String
         Dim EE As List(Of String)   'Epreuves Ecrites
@@ -15,7 +19,7 @@
                        ByVal c As String, ByVal v As String)
             Me.Nom = n
             Prenom = p
-            Age = a
+            Age = Integer.Parse(a)
             Adresse = adr
             CP = c
             Ville = v
@@ -28,6 +32,7 @@
 
     Public ReadOnly NB_EE_MAX As Integer = 4
     Public ReadOnly NB_EO_MAX As Integer = 3
+    Public ReadOnly EOF_VIDE As String = "EOF_Vide"
 
     Public candInscrit As Candidat 'stock les données d'un candidat lors de son inscription
     Public NumAutoCandidat As Integer = 1
@@ -43,13 +48,80 @@
                                 "Gestion", "Mathématiques", "Réseau", "Système"}
 
     Sub Main()
-        Dim c As Candidat
-        Dim numFile As Integer = FreeFile()
+        Dim nomFile As String = "Sauvegarde.txt"
+        If System.IO.File.Exists(nomFile) Then
+            LectureSauvegarde(nomFile)
+        End If
+
         Dim inscriptionEnd As Boolean = False
         Application.Run(FormAccueil)
         If Not inscriptionEnd Then
-
+            EcrireSauvegarde(nomFile)
+            MsgBox("La liste des candidats a bien été sauvegardé ! ")
         End If
+    End Sub
+
+    Private Sub LectureSauvegarde(ByRef nomFile As String)
+        Dim numFile As Integer = FreeFile()
+
+        FileOpen(numFile, nomFile, OpenMode.Input)
+        While Not EOF(numFile)
+            Dim numCand As Integer
+            Dim c As Candidat = New Candidat("", "", "0", "", "", "")
+            '1ère ligne : num de candidat
+            Input(numFile, numCand)
+            Input(numFile, c.Nom)
+            Input(numFile, c.Prenom)
+            Input(numFile, c.Age)
+            Input(numFile, c.Adresse)
+            Input(numFile, c.CP)
+            Input(numFile, c.Ville)
+            Input(numFile, c.Region)
+            For i As Integer = 1 To NB_EE_MAX
+                Dim ee As String = ""
+                Input(numFile, ee)
+                c.EE.Add(ee)
+            Next
+            For i As Integer = 1 To NB_EO_MAX
+                Dim eo As String = ""
+                Input(numFile, eo)
+                c.EO.Add(eo)
+            Next
+            Input(numFile, c.EOF)
+            LineInput(numFile)
+
+            listCandidat.Add(numCand, c)
+            If numCand >= NumAutoCandidat Then
+                NumAutoCandidat = numCand + 1
+            End If
+        End While
+        FileClose(numFile)
+    End Sub
+
+    Private Sub EcrireSauvegarde(ByRef nomFile As String)
+        Dim numFile As Integer = FreeFile()
+        FileOpen(numFile, nomFile, OpenMode.Output)
+        For Each kval As KeyValuePair(Of Integer, Candidat) In listCandidat
+            Write(numFile, kval.Key)
+            With kval.Value
+                Write(numFile, .Nom)
+                Write(numFile, .Prenom)
+                Write(numFile, .Age)
+                Write(numFile, .Adresse)
+                Write(numFile, .CP)
+                Write(numFile, .Ville)
+                Write(numFile, .Region)
+                For Each ee As String In .EE
+                    Write(numFile, ee)
+                Next
+                For Each eo As String In .EO
+                    Write(numFile, eo)
+                Next
+                WriteLine(numFile, .EOF)
+                WriteLine(numFile)
+            End With
+        Next
+        FileClose(numFile)
     End Sub
 
     Public Function ExtraireNumCandidat(ByRef s As String) As Integer
