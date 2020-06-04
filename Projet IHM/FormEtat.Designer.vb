@@ -206,7 +206,7 @@ Partial Class FormEtat
         Me.LabelInfoCand.BackColor = System.Drawing.Color.Cornsilk
         Me.LabelInfoCand.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LabelInfoCand.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.LabelInfoCand.Location = New System.Drawing.Point(138, 58)
+        Me.LabelInfoCand.Location = New System.Drawing.Point(138, 42)
         Me.LabelInfoCand.Name = "LabelInfoCand"
         Me.LabelInfoCand.Size = New System.Drawing.Size(38, 22)
         Me.LabelInfoCand.TabIndex = 19

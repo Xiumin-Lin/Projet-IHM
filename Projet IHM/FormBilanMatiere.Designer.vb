@@ -71,7 +71,7 @@ Partial Class FormBilanMatiere
         '
         Me.LabelID.AutoSize = True
         Me.LabelID.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.LabelID.Location = New System.Drawing.Point(43, 151)
+        Me.LabelID.Location = New System.Drawing.Point(624, 151)
         Me.LabelID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelID.Name = "LabelID"
         Me.LabelID.Size = New System.Drawing.Size(28, 20)
@@ -83,7 +83,7 @@ Partial Class FormBilanMatiere
         Me.ListBoxID.BackColor = System.Drawing.Color.Cornsilk
         Me.ListBoxID.FormattingEnabled = True
         Me.ListBoxID.ItemHeight = 20
-        Me.ListBoxID.Location = New System.Drawing.Point(3, 3)
+        Me.ListBoxID.Location = New System.Drawing.Point(584, 3)
         Me.ListBoxID.Name = "ListBoxID"
         Me.ListBoxID.Size = New System.Drawing.Size(73, 224)
         Me.ListBoxID.TabIndex = 8
@@ -93,7 +93,7 @@ Partial Class FormBilanMatiere
         Me.ListBoxNom.BackColor = System.Drawing.Color.Cornsilk
         Me.ListBoxNom.FormattingEnabled = True
         Me.ListBoxNom.ItemHeight = 20
-        Me.ListBoxNom.Location = New System.Drawing.Point(246, 3)
+        Me.ListBoxNom.Location = New System.Drawing.Point(167, 3)
         Me.ListBoxNom.Name = "ListBoxNom"
         Me.ListBoxNom.Size = New System.Drawing.Size(190, 224)
         Me.ListBoxNom.TabIndex = 10
@@ -102,7 +102,7 @@ Partial Class FormBilanMatiere
         '
         Me.LabelNom.AutoSize = True
         Me.LabelNom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.LabelNom.Location = New System.Drawing.Point(286, 151)
+        Me.LabelNom.Location = New System.Drawing.Point(207, 151)
         Me.LabelNom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelNom.Name = "LabelNom"
         Me.LabelNom.Size = New System.Drawing.Size(44, 20)
@@ -114,7 +114,7 @@ Partial Class FormBilanMatiere
         Me.ListBoxPrenom.BackColor = System.Drawing.Color.Cornsilk
         Me.ListBoxPrenom.FormattingEnabled = True
         Me.ListBoxPrenom.ItemHeight = 20
-        Me.ListBoxPrenom.Location = New System.Drawing.Point(442, 3)
+        Me.ListBoxPrenom.Location = New System.Drawing.Point(363, 3)
         Me.ListBoxPrenom.Name = "ListBoxPrenom"
         Me.ListBoxPrenom.Size = New System.Drawing.Size(215, 224)
         Me.ListBoxPrenom.TabIndex = 12
@@ -123,7 +123,7 @@ Partial Class FormBilanMatiere
         '
         Me.LabelPrenom.AutoSize = True
         Me.LabelPrenom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.LabelPrenom.Location = New System.Drawing.Point(482, 151)
+        Me.LabelPrenom.Location = New System.Drawing.Point(403, 151)
         Me.LabelPrenom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelPrenom.Name = "LabelPrenom"
         Me.LabelPrenom.Size = New System.Drawing.Size(67, 20)
@@ -187,7 +187,7 @@ Partial Class FormBilanMatiere
         Me.ListBoxRegion.BackColor = System.Drawing.Color.Cornsilk
         Me.ListBoxRegion.FormattingEnabled = True
         Me.ListBoxRegion.ItemHeight = 20
-        Me.ListBoxRegion.Location = New System.Drawing.Point(82, 3)
+        Me.ListBoxRegion.Location = New System.Drawing.Point(3, 3)
         Me.ListBoxRegion.Name = "ListBoxRegion"
         Me.ListBoxRegion.Size = New System.Drawing.Size(158, 224)
         Me.ListBoxRegion.TabIndex = 19
@@ -196,7 +196,7 @@ Partial Class FormBilanMatiere
         '
         Me.LabelRegion.AutoSize = True
         Me.LabelRegion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!)
-        Me.LabelRegion.Location = New System.Drawing.Point(122, 152)
+        Me.LabelRegion.Location = New System.Drawing.Point(43, 151)
         Me.LabelRegion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelRegion.Name = "LabelRegion"
         Me.LabelRegion.Size = New System.Drawing.Size(61, 20)

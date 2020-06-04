@@ -1,9 +1,5 @@
-﻿Imports System.Deployment.Application
-Imports System.Drawing.Drawing2D
-Imports System.IO
-
-Module ModuleProjetIHM
-    Public Structure Candidat
+﻿Module ModuleProjetIHM
+    Public Structure Candidat 'Stock les infos d'un candidat
         Dim Nom As String
         Dim Prenom As String
         Dim Age As Integer
@@ -30,12 +26,13 @@ Module ModuleProjetIHM
         End Sub
     End Structure
 
-    Public ReadOnly NB_EE_MAX As Integer = 4
-    Public ReadOnly NB_EO_MAX As Integer = 3
-    Public ReadOnly EOF_VIDE As String = "EOF_Vide"
+    Public ReadOnly NB_EE_MAX As Integer = 4 'Le nb d'épreuves écrite à prendre
+    Public ReadOnly NB_EO_MAX As Integer = 3 'Le nb d'épreuves orale à prendre
+    Public inscriptionEnd As Boolean = False 'Indique si l'inscription est fermée ou pas
 
     Public candInscrit As Candidat 'stock les données d'un candidat lors de son inscription
     Public NumAutoCandidat As Integer = 1
+    'List des candidats dont l'inscription ont été valider
     Public listCandidat As Dictionary(Of Integer, Candidat) = New Dictionary(Of Integer, Candidat)
 
     Public tabRegion() As String = {"Auvergne", "Bordelais", "Bourgogne", "Bretagne", "Corse",
@@ -53,8 +50,8 @@ Module ModuleProjetIHM
             LectureSauvegarde(nomFile)
         End If
 
-        Dim inscriptionEnd As Boolean = False
         Application.Run(FormAccueil)
+        'Si les inscription ne sont pas terminé, on sauvegarde
         If Not inscriptionEnd Then
             EcrireSauvegarde(nomFile)
             MsgBox("La liste des candidats a bien été sauvegardé ! ")
@@ -68,7 +65,7 @@ Module ModuleProjetIHM
         While Not EOF(numFile)
             Dim numCand As Integer
             Dim c As Candidat = New Candidat("", "", "0", "", "", "")
-            '1ère ligne : num de candidat
+
             Input(numFile, numCand)
             Input(numFile, c.Nom)
             Input(numFile, c.Prenom)

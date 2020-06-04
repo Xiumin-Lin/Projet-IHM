@@ -15,7 +15,6 @@
 
         'On ajoute les données des candidats dans les différentes ListBox
         For Each c As String In listEluTrié
-            MsgBox(c)
             Dim num As Integer = ExtraireNumCandidat(c)
             If num > 0 Then
                 With listCandidat(num)
@@ -51,6 +50,62 @@
         ListBoxPrenom.SelectedIndex = idx
         ListBoxEE.SelectedIndex = idx
         ListBoxEO.SelectedIndex = idx
+    End Sub
+
+    Public Sub SauvegardeBilanMatiere()
+        If ListBoxRegion.Items.Count = 0 Then
+            Exit Sub
+        End If
+        'On récup tous les régions dispo pour cette matière
+        Dim listRegionDispo As List(Of String) = New List(Of String)
+        For Each region As String In ListBoxRegion.Items
+            If Not listRegionDispo.Contains(region) Then
+                listRegionDispo.Add(region)
+            End If
+        Next
+
+        For Each region As String In listRegionDispo
+            Dim listCandEE As List(Of Integer) = New List(Of Integer)
+            Dim listCandEO As List(Of Integer) = New List(Of Integer)
+
+            For idx As Integer = 0 To ListBoxID.Items.Count - 1
+                ListBoxID.SelectedIndex = idx
+                If listCandidat(ListBoxID.SelectedItem).Region.Equals(region) Then
+                    If ListBoxEE.SelectedItem = O Then
+                        listCandEE.Add(ListBoxID.SelectedItem)
+                    Else
+                        listCandEO.Add(ListBoxID.SelectedItem)
+                    End If
+                End If
+            Next
+            System.IO.Directory.CreateDirectory(LabelMatiere.Text)
+            Dim numFile As Integer = FreeFile()
+            Dim nom As String = LabelMatiere.Text + "\" + LabelMatiere.Text + " - " + region + ".txt"
+            FileOpen(numFile, nom, OpenMode.Output)
+            PrintLine(numFile, "Epreuve écrite :")
+            If listCandEE.Count = 0 Then
+                PrintLine(numFile, "< Aucun Candidat >")
+            Else
+                For Each numC As Integer In listCandEE
+                    With listCandidat(numC)
+                        PrintLine(numFile, .Nom + " " + .Prenom + " <-- n°" + numC.ToString)
+                    End With
+                Next
+            End If
+
+            PrintLine(numFile)
+            PrintLine(numFile, "Epreuve orale :")
+            If listCandEO.Count = 0 Then
+                PrintLine(numFile, "< Aucun Candidat >")
+            Else
+                For Each numC As Integer In listCandEO
+                    With listCandidat(numC)
+                        PrintLine(numFile, .Nom + " " + .Prenom + " <-- n°" + numC.ToString)
+                    End With
+                Next
+            End If
+            FileClose()
+        Next
     End Sub
 
     Private Sub ButtonClose_Click(sender As Object, e As EventArgs) Handles ButtonClose.Click

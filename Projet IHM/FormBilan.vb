@@ -56,7 +56,19 @@
     End Sub
 
     Private Sub ButtonCloseApp_Click(sender As Object, e As EventArgs) Handles ButtonCloseApp.Click
+        For Each matiere As String In ComboBoxMatiere.Items
+            With FormBilanMatiere
+                .LabelMatiere.Text = matiere
+                .WindowState = FormWindowState.Minimized
+                .Visible = False
+                .Show()
+                .SauvegardeBilanMatiere()
+                .Close()
+            End With
+        Next
+        MsgBox("Les fichiers listing des candidats inscrits par épreuve ont bien été crée", MsgBoxStyle.Information)
         Me.Close()
+        inscriptionEnd = True
         FormAccueil.Close()
     End Sub
 
