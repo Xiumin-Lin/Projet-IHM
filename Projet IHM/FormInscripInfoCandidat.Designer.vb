@@ -156,7 +156,7 @@ Partial Class FormInscripInfoCandidat
         Me.TextBoxCP.MaxLength = 5
         Me.TextBoxCP.Name = "TextBoxCP"
         Me.TextBoxCP.Size = New System.Drawing.Size(260, 27)
-        Me.TextBoxCP.TabIndex = 10
+        Me.TextBoxCP.TabIndex = 11
         '
         'LabelInfoAge
         '
@@ -235,11 +235,11 @@ Partial Class FormInscripInfoCandidat
         '
         Me.LabelAgeMin.AutoSize = True
         Me.LabelAgeMin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAgeMin.Location = New System.Drawing.Point(22, 262)
+        Me.LabelAgeMin.Location = New System.Drawing.Point(22, 273)
         Me.LabelAgeMin.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelAgeMin.Name = "LabelAgeMin"
         Me.LabelAgeMin.Size = New System.Drawing.Size(65, 20)
-        Me.LabelAgeMin.TabIndex = 17
+        Me.LabelAgeMin.TabIndex = 7
         Me.LabelAgeMin.Text = "AgeMin"
         Me.LabelAgeMin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -247,11 +247,11 @@ Partial Class FormInscripInfoCandidat
         '
         Me.LabelAgeMax.AutoSize = True
         Me.LabelAgeMax.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAgeMax.Location = New System.Drawing.Point(710, 262)
+        Me.LabelAgeMax.Location = New System.Drawing.Point(710, 273)
         Me.LabelAgeMax.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelAgeMax.Name = "LabelAgeMax"
         Me.LabelAgeMax.Size = New System.Drawing.Size(69, 20)
-        Me.LabelAgeMax.TabIndex = 18
+        Me.LabelAgeMax.TabIndex = 7
         Me.LabelAgeMax.Text = "AgeMax"
         Me.LabelAgeMax.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '

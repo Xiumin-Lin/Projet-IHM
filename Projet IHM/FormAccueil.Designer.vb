@@ -78,7 +78,7 @@ Partial Class FormAccueil
         Me.LabelAccueil.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LabelAccueil.Name = "LabelAccueil"
         Me.LabelAccueil.Size = New System.Drawing.Size(663, 64)
-        Me.LabelAccueil.TabIndex = 3
+        Me.LabelAccueil.TabIndex = 0
         Me.LabelAccueil.Text = "Accueil"
         Me.LabelAccueil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '

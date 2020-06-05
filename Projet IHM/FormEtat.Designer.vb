@@ -197,7 +197,7 @@ Partial Class FormEtat
         Me.LabelNbCand.Location = New System.Drawing.Point(45, 38)
         Me.LabelNbCand.Name = "LabelNbCand"
         Me.LabelNbCand.Size = New System.Drawing.Size(87, 44)
-        Me.LabelNbCand.TabIndex = 18
+        Me.LabelNbCand.TabIndex = 1
         Me.LabelNbCand.Text = "Nb de candidat :"
         '
         'LabelInfoCand
@@ -209,7 +209,7 @@ Partial Class FormEtat
         Me.LabelInfoCand.Location = New System.Drawing.Point(138, 42)
         Me.LabelInfoCand.Name = "LabelInfoCand"
         Me.LabelInfoCand.Size = New System.Drawing.Size(38, 22)
-        Me.LabelInfoCand.TabIndex = 19
+        Me.LabelInfoCand.TabIndex = 2
         Me.LabelInfoCand.Text = "???"
         '
         'PanelListBox

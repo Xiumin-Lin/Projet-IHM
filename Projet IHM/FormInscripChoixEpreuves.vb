@@ -21,6 +21,9 @@
         For Each chk As CheckBox In GroupBoxOral.Controls
             AddHandler chk.CheckedChanged, AddressOf CheckBoxOral_CheckedChanged
         Next
+        'Init le compteur d'épreuve restante à choisir
+        LabelNbEERestant.Text = nbEERestant.ToString
+        LabelNbEORestant.Text = nbEORestant.ToString
 
         'Init le candidat s'il existe (utilisé lors d'une modif ou supp)
         If numCandidat < NumAutoCandidat Then
@@ -71,20 +74,8 @@
                                                                                         RadioButtonNon.CheckedChanged
         If RadioButtonYes.Checked Then
             'Ajout list des matières
-            For Each m As String In tabEO
-                Dim invalide As Boolean = False
-                For Each chk As CheckBox In GroupBoxOral.Controls
-                    If chk.Checked Or chk.Enabled = False Then
-                        If m.Equals(chk.Text) Then
-                            invalide = True
-                            Exit For
-                        End If
-                    End If
-                Next
-                If Not invalide Then
-                    ComboBoxEFacultative.Items.Add(m)
-                End If
-            Next
+            SetListMatiereNonChoisi(tabEE, GroupBoxEcrit)
+            SetListMatiereNonChoisi(tabEO, GroupBoxOral)
             ComboBoxEFacultative.Sorted = True
             ComboBoxEFacultative.DropDownStyle = ComboBoxStyle.DropDownList
             ComboBoxEFacultative.SelectedIndex = 0
@@ -99,6 +90,26 @@
         End If
         RadioButtonYes.ForeColor = RadioButton.DefaultForeColor
         RadioButtonNon.ForeColor = RadioButton.DefaultForeColor
+    End Sub
+    'Ajoute dans le ComboBoxEFacultative les matières non selectionnées d'un groupeBox de checkBox
+    'tabMatiere est un tableau listant tous les matières présent dans un groupeBox
+    Private Sub SetListMatiereNonChoisi(tabMatiere As String(), gBox As GroupBox)
+        For Each m As String In tabMatiere
+            If Not ComboBoxEFacultative.Items.Contains(m) Then
+                Dim invalide As Boolean = False
+                For Each chk As CheckBox In gBox.Controls
+                    If chk.Checked Or chk.Enabled = False Then
+                        If m.Equals(chk.Text) Then
+                            invalide = True
+                            Exit For
+                        End If
+                    End If
+                Next
+                If Not invalide Then
+                    ComboBoxEFacultative.Items.Add(m)
+                End If
+            End If
+        Next
     End Sub
 
     Private Sub CheckBoxEcrit_CheckedChanged(sender As Object, e As EventArgs)
@@ -206,7 +217,7 @@
             ErreurValidation = True
         End If
         If Not RadioButtonYes.Checked And Not RadioButtonNon.Checked Then
-            s += "- Vous devez indiquer vous choix concernant le choix d'une épreuve facultavive"
+            s += "- Vous devez indiquer votre choix concernant le choix d'une épreuve facultative"
             RadioButtonYes.ForeColor = Color.Red
             RadioButtonNon.ForeColor = Color.Red
             ErreurValidation = True

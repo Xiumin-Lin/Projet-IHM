@@ -102,7 +102,7 @@
                                        "Demande de Confirmation de suppression")
         If choix = MsgBoxResult.Yes Then
             listCandidat.Remove(numCandidat)
-            MsgBox("Le candidat n°" + numCandidat.ToString + " a bien été supprimer",
+            MsgBox("Le candidat n°" + numCandidat.ToString + " a bien été supprimé",
                            MsgBoxStyle.Information, "Confirmation de la suppression")
             Me.Close()
             FormAccueil.Show()

@@ -49,7 +49,7 @@ Partial Class FormBilanMatiere
         Me.LabelBilanMatiere.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LabelBilanMatiere.Name = "LabelBilanMatiere"
         Me.LabelBilanMatiere.Size = New System.Drawing.Size(720, 68)
-        Me.LabelBilanMatiere.TabIndex = 5
+        Me.LabelBilanMatiere.TabIndex = 0
         Me.LabelBilanMatiere.Text = "Bilan des inscription par matière"
         Me.LabelBilanMatiere.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -63,7 +63,7 @@ Partial Class FormBilanMatiere
         Me.LabelMatiere.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelMatiere.Name = "LabelMatiere"
         Me.LabelMatiere.Size = New System.Drawing.Size(57, 32)
-        Me.LabelMatiere.TabIndex = 6
+        Me.LabelMatiere.TabIndex = 2
         Me.LabelMatiere.Text = "???"
         Me.LabelMatiere.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -75,7 +75,7 @@ Partial Class FormBilanMatiere
         Me.LabelID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelID.Name = "LabelID"
         Me.LabelID.Size = New System.Drawing.Size(28, 20)
-        Me.LabelID.TabIndex = 7
+        Me.LabelID.TabIndex = 6
         Me.LabelID.Text = "N°"
         '
         'ListBoxID
@@ -86,7 +86,7 @@ Partial Class FormBilanMatiere
         Me.ListBoxID.Location = New System.Drawing.Point(584, 3)
         Me.ListBoxID.Name = "ListBoxID"
         Me.ListBoxID.Size = New System.Drawing.Size(73, 224)
-        Me.ListBoxID.TabIndex = 8
+        Me.ListBoxID.TabIndex = 3
         '
         'ListBoxNom
         '
@@ -96,7 +96,7 @@ Partial Class FormBilanMatiere
         Me.ListBoxNom.Location = New System.Drawing.Point(167, 3)
         Me.ListBoxNom.Name = "ListBoxNom"
         Me.ListBoxNom.Size = New System.Drawing.Size(190, 224)
-        Me.ListBoxNom.TabIndex = 10
+        Me.ListBoxNom.TabIndex = 1
         '
         'LabelNom
         '
@@ -106,7 +106,7 @@ Partial Class FormBilanMatiere
         Me.LabelNom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelNom.Name = "LabelNom"
         Me.LabelNom.Size = New System.Drawing.Size(44, 20)
-        Me.LabelNom.TabIndex = 9
+        Me.LabelNom.TabIndex = 4
         Me.LabelNom.Text = "Nom"
         '
         'ListBoxPrenom
@@ -117,7 +117,7 @@ Partial Class FormBilanMatiere
         Me.ListBoxPrenom.Location = New System.Drawing.Point(363, 3)
         Me.ListBoxPrenom.Name = "ListBoxPrenom"
         Me.ListBoxPrenom.Size = New System.Drawing.Size(215, 224)
-        Me.ListBoxPrenom.TabIndex = 12
+        Me.ListBoxPrenom.TabIndex = 2
         '
         'LabelPrenom
         '
@@ -127,7 +127,7 @@ Partial Class FormBilanMatiere
         Me.LabelPrenom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelPrenom.Name = "LabelPrenom"
         Me.LabelPrenom.Size = New System.Drawing.Size(67, 20)
-        Me.LabelPrenom.TabIndex = 11
+        Me.LabelPrenom.TabIndex = 5
         Me.LabelPrenom.Text = "Prénom"
         '
         'ListBoxEE
@@ -138,7 +138,7 @@ Partial Class FormBilanMatiere
         Me.ListBoxEE.Location = New System.Drawing.Point(664, 3)
         Me.ListBoxEE.Name = "ListBoxEE"
         Me.ListBoxEE.Size = New System.Drawing.Size(73, 224)
-        Me.ListBoxEE.TabIndex = 14
+        Me.ListBoxEE.TabIndex = 4
         '
         'LabelEcrit
         '
@@ -148,7 +148,7 @@ Partial Class FormBilanMatiere
         Me.LabelEcrit.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelEcrit.Name = "LabelEcrit"
         Me.LabelEcrit.Size = New System.Drawing.Size(58, 20)
-        Me.LabelEcrit.TabIndex = 13
+        Me.LabelEcrit.TabIndex = 7
         Me.LabelEcrit.Text = "Ecrit ?"
         '
         'ListBoxEO
@@ -159,7 +159,7 @@ Partial Class FormBilanMatiere
         Me.ListBoxEO.Location = New System.Drawing.Point(743, 3)
         Me.ListBoxEO.Name = "ListBoxEO"
         Me.ListBoxEO.Size = New System.Drawing.Size(75, 224)
-        Me.ListBoxEO.TabIndex = 16
+        Me.ListBoxEO.TabIndex = 5
         '
         'LabelOral
         '
@@ -169,7 +169,7 @@ Partial Class FormBilanMatiere
         Me.LabelOral.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelOral.Name = "LabelOral"
         Me.LabelOral.Size = New System.Drawing.Size(55, 20)
-        Me.LabelOral.TabIndex = 15
+        Me.LabelOral.TabIndex = 8
         Me.LabelOral.Text = "Oral ?"
         '
         'ButtonClose
@@ -190,7 +190,7 @@ Partial Class FormBilanMatiere
         Me.ListBoxRegion.Location = New System.Drawing.Point(3, 3)
         Me.ListBoxRegion.Name = "ListBoxRegion"
         Me.ListBoxRegion.Size = New System.Drawing.Size(158, 224)
-        Me.ListBoxRegion.TabIndex = 19
+        Me.ListBoxRegion.TabIndex = 0
         '
         'LabelRegion
         '
@@ -200,7 +200,7 @@ Partial Class FormBilanMatiere
         Me.LabelRegion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelRegion.Name = "LabelRegion"
         Me.LabelRegion.Size = New System.Drawing.Size(61, 20)
-        Me.LabelRegion.TabIndex = 18
+        Me.LabelRegion.TabIndex = 3
         Me.LabelRegion.Text = "Région"
         '
         'PanelListBox
@@ -214,7 +214,7 @@ Partial Class FormBilanMatiere
         Me.PanelListBox.Location = New System.Drawing.Point(44, 175)
         Me.PanelListBox.Name = "PanelListBox"
         Me.PanelListBox.Size = New System.Drawing.Size(830, 234)
-        Me.PanelListBox.TabIndex = 20
+        Me.PanelListBox.TabIndex = 12
         '
         'LabelMat
         '
@@ -226,7 +226,7 @@ Partial Class FormBilanMatiere
         Me.LabelMat.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelMat.Name = "LabelMat"
         Me.LabelMat.Size = New System.Drawing.Size(115, 32)
-        Me.LabelMat.TabIndex = 21
+        Me.LabelMat.TabIndex = 1
         Me.LabelMat.Text = "Matière :"
         Me.LabelMat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '

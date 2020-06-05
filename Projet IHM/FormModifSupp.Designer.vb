@@ -45,7 +45,7 @@ Partial Class FormModifSupp
         Me.ButtonAnnuler.Location = New System.Drawing.Point(107, 331)
         Me.ButtonAnnuler.Name = "ButtonAnnuler"
         Me.ButtonAnnuler.Size = New System.Drawing.Size(112, 45)
-        Me.ButtonAnnuler.TabIndex = 7
+        Me.ButtonAnnuler.TabIndex = 10
         Me.ButtonAnnuler.Text = "Annuler"
         Me.ButtonAnnuler.UseVisualStyleBackColor = False
         '
@@ -55,7 +55,7 @@ Partial Class FormModifSupp
         Me.ButtonValider.Location = New System.Drawing.Point(402, 331)
         Me.ButtonValider.Name = "ButtonValider"
         Me.ButtonValider.Size = New System.Drawing.Size(112, 45)
-        Me.ButtonValider.TabIndex = 8
+        Me.ButtonValider.TabIndex = 9
         Me.ButtonValider.Text = "Valider"
         Me.ButtonValider.UseVisualStyleBackColor = False
         '
@@ -68,7 +68,7 @@ Partial Class FormModifSupp
         Me.PanelID.Location = New System.Drawing.Point(107, 237)
         Me.PanelID.Name = "PanelID"
         Me.PanelID.Size = New System.Drawing.Size(407, 74)
-        Me.PanelID.TabIndex = 28
+        Me.PanelID.TabIndex = 6
         '
         'ComboBoxIdCand
         '
@@ -86,7 +86,7 @@ Partial Class FormModifSupp
         Me.LabelIDCandidat.Location = New System.Drawing.Point(7, 11)
         Me.LabelIDCandidat.Name = "LabelIDCandidat"
         Me.LabelIDCandidat.Size = New System.Drawing.Size(196, 20)
-        Me.LabelIDCandidat.TabIndex = 14
+        Me.LabelIDCandidat.TabIndex = 1
         Me.LabelIDCandidat.Text = "L'identifiant du candidat :"
         '
         'PanelNum
@@ -98,7 +98,7 @@ Partial Class FormModifSupp
         Me.PanelNum.Location = New System.Drawing.Point(107, 138)
         Me.PanelNum.Name = "PanelNum"
         Me.PanelNum.Size = New System.Drawing.Size(407, 75)
-        Me.PanelNum.TabIndex = 27
+        Me.PanelNum.TabIndex = 3
         '
         'TextBoxNumCand
         '
@@ -113,7 +113,7 @@ Partial Class FormModifSupp
         Me.LabelNumCandidat.Location = New System.Drawing.Point(7, 13)
         Me.LabelNumCandidat.Name = "LabelNumCandidat"
         Me.LabelNumCandidat.Size = New System.Drawing.Size(264, 20)
-        Me.LabelNumCandidat.TabIndex = 12
+        Me.LabelNumCandidat.TabIndex = 0
         Me.LabelNumCandidat.Text = "Numéro d'inscription du candidat :"
         '
         'RadioButtonIDCand
@@ -122,7 +122,7 @@ Partial Class FormModifSupp
         Me.RadioButtonIDCand.Location = New System.Drawing.Point(63, 276)
         Me.RadioButtonIDCand.Name = "RadioButtonIDCand"
         Me.RadioButtonIDCand.Size = New System.Drawing.Size(17, 16)
-        Me.RadioButtonIDCand.TabIndex = 26
+        Me.RadioButtonIDCand.TabIndex = 5
         Me.RadioButtonIDCand.TabStop = True
         Me.RadioButtonIDCand.UseVisualStyleBackColor = True
         '
@@ -132,7 +132,7 @@ Partial Class FormModifSupp
         Me.RadioButtonNumCand.Location = New System.Drawing.Point(63, 164)
         Me.RadioButtonNumCand.Name = "RadioButtonNumCand"
         Me.RadioButtonNumCand.Size = New System.Drawing.Size(17, 16)
-        Me.RadioButtonNumCand.TabIndex = 25
+        Me.RadioButtonNumCand.TabIndex = 2
         Me.RadioButtonNumCand.TabStop = True
         Me.RadioButtonNumCand.UseVisualStyleBackColor = True
         '
@@ -141,7 +141,7 @@ Partial Class FormModifSupp
         Me.LabelOu.Location = New System.Drawing.Point(107, 216)
         Me.LabelOu.Name = "LabelOu"
         Me.LabelOu.Size = New System.Drawing.Size(400, 18)
-        Me.LabelOu.TabIndex = 24
+        Me.LabelOu.TabIndex = 4
         Me.LabelOu.Text = "OU"
         Me.LabelOu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -151,7 +151,7 @@ Partial Class FormModifSupp
         Me.LabelIndication.Location = New System.Drawing.Point(59, 103)
         Me.LabelIndication.Name = "LabelIndication"
         Me.LabelIndication.Size = New System.Drawing.Size(500, 20)
-        Me.LabelIndication.TabIndex = 23
+        Me.LabelIndication.TabIndex = 1
         Me.LabelIndication.Text = "Veuillez entrer le numéro d'inscription ou l'identifiant du candidat :"
         '
         'LabelTitre
@@ -163,7 +163,7 @@ Partial Class FormModifSupp
         Me.LabelTitre.Location = New System.Drawing.Point(12, 24)
         Me.LabelTitre.Name = "LabelTitre"
         Me.LabelTitre.Size = New System.Drawing.Size(586, 62)
-        Me.LabelTitre.TabIndex = 22
+        Me.LabelTitre.TabIndex = 0
         Me.LabelTitre.Text = "Modification/Suppression"
         Me.LabelTitre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
