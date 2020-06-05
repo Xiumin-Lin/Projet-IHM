@@ -28,7 +28,7 @@
 
     Public ReadOnly NB_EE_MAX As Integer = 4 'Le nb d'épreuves écrite à prendre
     Public ReadOnly NB_EO_MAX As Integer = 3 'Le nb d'épreuves orale à prendre
-    Public inscriptionEnd As Boolean = False 'Indique si l'inscription est fermée ou pas
+    Public inscriptionEnd As Boolean = False 'Indique si l'inscription est fermée
 
     Public candInscrit As Candidat 'stock les données d'un candidat lors de son inscription
     Public NumAutoCandidat As Integer = 1
@@ -51,7 +51,7 @@
         End If
 
         Application.Run(FormAccueil)
-        'Si les inscription ne sont pas terminé, on sauvegarde
+        'Si les inscriptions ne sont pas terminé, on sauvegarde
         If Not inscriptionEnd Then
             EcrireSauvegarde(nomFile)
             MsgBox("La liste des candidats a bien été sauvegardé ! ")
@@ -124,8 +124,8 @@
     Public Function ExtraireNumCandidat(ByRef s As String) As Integer
         'Permet d'extraire le num du candidat d'après une chaîne de forme "Nom Prenom Num"
         'Exemple avec : "Jean Louis 19" la fonction extrait et retourne le nombre 19
-        'Le num du candidat doit être obligatoirement être les dernière caractère de la phrase 
-        'Si la chaîne de caractère ne respecte pas la forme demandé, la fonction retourne 0
+        'Le num du candidat doit être obligatoirement être les derniers caractères de la phrase 
+        'Si la chaîne de caractère ne respecte pas la forme demandée, la fonction retourne 0
         Dim cpt As Integer = 1
         While IsNumeric(Strings.Right(s, cpt))
             cpt += 1

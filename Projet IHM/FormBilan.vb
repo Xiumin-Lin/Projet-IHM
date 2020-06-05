@@ -66,7 +66,7 @@
                 .Close()
             End With
         Next
-        MsgBox("Les fichiers listing des candidats inscrits par épreuve ont bien été crée", MsgBoxStyle.Information)
+        MsgBox("Les fichiers listing des candidats inscrits par épreuve ont bien été créé", MsgBoxStyle.Information)
         Me.Close()
         inscriptionEnd = True
         FormAccueil.Close()

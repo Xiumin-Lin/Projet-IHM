@@ -56,7 +56,7 @@
         If ListBoxRegion.Items.Count = 0 Then
             Exit Sub
         End If
-        'On récup tous les régions dispo pour cette matière
+        'On récup toutes les régions dispo pour cette matière
         Dim listRegionDispo As List(Of String) = New List(Of String)
         For Each region As String In ListBoxRegion.Items
             If Not listRegionDispo.Contains(region) Then

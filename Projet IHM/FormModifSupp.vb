@@ -1,9 +1,9 @@
 ﻿Public Class FormModifSupp
-    'Le fomurlaire FormModifSupp réunis 2 formulaires en 1, le formulaire de modification des données d'un candidat 
+    'Le formulaire FormModifSupp réunis 2 formulaires en 1, le formulaire de modification des données d'un candidat 
     'et le formulaire de suppression d'un candidat. 
     'Le passage d'un formulaire à un autre est indiqué par l'attribut etatModif :
-    ' Si True alors le formulaire est en mode modifcation
-    ' Sinon le formulaire est en mode suppresion
+    ' Si True alors le formulaire est en mode modification
+    ' Sinon le formulaire est en mode suppression
 
     Public etatModif As Boolean = True 'Par défautl, le formulaire est en mode modification
     Private Sub FormModifSupp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -41,7 +41,7 @@
 
     Private Sub ButtonValider_Click(sender As Object, e As EventArgs) Handles ButtonValider.Click
         If Not RadioButtonNumCand.Checked And Not RadioButtonIDCand.Checked Then
-            MsgBox("Veuillez choisir le moyen d'acccès au données d'un candidat", MsgBoxStyle.Exclamation)
+            MsgBox("Veuillez choisir le moyen d'acccès aux données d'un candidat", MsgBoxStyle.Exclamation)
             Exit Sub
         End If
 
@@ -67,7 +67,7 @@
         Else 'acces par identifiant du candidat
             If ComboBoxIdCand.Text = "" Or Not ComboBoxIdCand.Items.Contains(ComboBoxIdCand.Text) Then
                 LabelIDCandidat.ForeColor = Color.Red
-                MsgBox("Entrée Invalide ! Le candidat que vous avez saisie n'est pas présent dans la liste des candidats",
+                MsgBox("Entrée Invalide ! Le candidat que vous avez saisi n'est pas présent dans la liste des candidats",
                        MsgBoxStyle.Exclamation)
                 Exit Sub
             End If
@@ -81,7 +81,7 @@
                     FormRecap.numCandidat = num
                 End If
             Else
-                MsgBox("Erreur, num de candidat invalide") 'Normalement on arrive jamais à ce condition "else" 
+                MsgBox("Erreur, num de candidat invalide") 'Normalement on n'arrive jamais à ce condition "else" 
                 Exit Sub
             End If
         End If

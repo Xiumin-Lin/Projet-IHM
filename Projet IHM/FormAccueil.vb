@@ -1,5 +1,4 @@
 ﻿Public Class FormAccueil
-
     Private Sub ButtonInscription_Click(sender As Object, e As EventArgs) Handles ButtonInscrip.Click
         FormInscripInfoCandidat.Show()
         Me.Hide()

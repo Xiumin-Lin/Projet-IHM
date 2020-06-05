@@ -92,7 +92,7 @@
         RadioButtonNon.ForeColor = RadioButton.DefaultForeColor
     End Sub
     'Ajoute dans le ComboBoxEFacultative les matières non selectionnées d'un groupeBox de checkBox
-    'tabMatiere est un tableau listant tous les matières présent dans un groupeBox
+    'tabMatiere est un tableau listant tous les matières présentes dans un groupeBox
     Private Sub SetListMatiereNonChoisi(tabMatiere As String(), gBox As GroupBox)
         For Each m As String In tabMatiere
             If Not ComboBoxEFacultative.Items.Contains(m) Then
@@ -147,7 +147,7 @@
             nbEORestant += 1
         End If
 
-        CheckBox_CheckDouble(sender) 'Si un matiere à une épreuve ecrite et orale, on désative le choix de l'épreuve non coché 
+        CheckBox_CheckDouble(sender) 'Si un matiere à une épreuve ecrite et orale, on désactive le choix de l'épreuve non coché 
         'On active le choix d'une epreuve facultative
 
         If nbEERestant = 0 And nbEORestant = 0 Then
@@ -160,6 +160,16 @@
         LabelNbEORestant.Text = nbEORestant.ToString 'on actualise le nb de choix restant
     End Sub
 
+    'Si le checkBox d'une matière est coché, alors le checkBox de l'autre version de la même matière est désactivé
+    Private Sub CheckBox_switchEnabled(chk1 As CheckBox, chk2 As CheckBox)
+        If chk1.Checked Then
+            chk2.Enabled = False
+        Else
+            chk2.Enabled = True
+        End If
+    End Sub
+
+    'On associe le checkBox d'une matière à l'autre version du checkBox de la même matière
     Private Sub CheckBox_CheckDouble(chk As CheckBox)
         Select Case chk.Name
             Case CheckBoxDroit.Name
@@ -187,14 +197,6 @@
             Case CheckBoxSysO.Name
                 CheckBox_switchEnabled(CheckBoxSysO, CheckBoxSys)
         End Select
-    End Sub
-
-    Private Sub CheckBox_switchEnabled(chk1 As CheckBox, chk2 As CheckBox)
-        If chk1.Checked Then
-            chk2.Enabled = False
-        Else
-            chk2.Enabled = True
-        End If
     End Sub
 
     Private Sub ButtonAnnuler_Click(sender As Object, e As EventArgs) Handles ButtonAnnuler.Click

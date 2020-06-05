@@ -3,7 +3,7 @@
     'Les boutons permettant de naviguer entre les autres form diffère selon l'état du form
     '- A l'état d'inscription, seuls les boutons annuler (retour à l'accueil), modifier et valider sont dispo
     '- A l'état de suppression, seul le bouton validant la suppression est present
-    '- Si on est ni a l'état inscription ni à la supression, le form est alors à l'état Bilan, seuls le bouton fermer sera dispo (sans retour a l'accueil)
+    '- Si on n'est ni n'a l'état inscription ni à la suppression, le form est alors à l'état Bilan, seul le bouton fermer sera dispo (sans retour a l'accueil)
     Public etatInscription As Boolean = False
     Public etatSupp As Boolean = False
     Public numCandidat As Integer
@@ -37,7 +37,7 @@
             Next
         End With
         'Gestion des boutons
-        If etatInscription Then 'l'état modifer affiche les même boutons que l'inscription
+        If etatInscription Then 'l'état modifier affiche les même boutons que l'inscription
             AfficheButtonsInscrip()
         ElseIf etatSupp Then
             AfficheButtonsSupp()

@@ -4,6 +4,7 @@
     ReadOnly AgeMin As Integer = 18
     ReadOnly AgeMax As Integer = 55
     Public numCandidat As Integer = NumAutoCandidat
+
     Private Sub FormInscripInfoCandidat_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text = "Formulaire d'inscription : Renseignements du candidat | " + TimeOfDay + " | Temps Restants : " + Temps.ToString + "s"
         'Init CANDIDAT 
@@ -18,7 +19,7 @@
                     TextBoxVille.Text = .Ville
                 End With
             Else
-                MsgBox("Le num du candidat demandé n'existe pas. Il a peut-être était supprimé.")
+                MsgBox("Le num du candidat demandé n'existe pas. Il a peut-être été supprimé.")
             End If
         End If
         'Init le ScrollBar pour l'age
@@ -48,14 +49,14 @@
     End Sub
 
     Private Sub TextBoxCP_keypress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles TextBoxCP.KeyPress
-        If e.KeyChar = vbBack Then Exit Sub 'Seul les chiffres sont autorisés dans le textbox du code postale
+        If e.KeyChar = vbBack Then Exit Sub 'Seul les chiffres sont autorisés dans le textbox du code postal
         If Not Char.IsDigit(e.KeyChar) Then
             e.Handled = True
         End If
     End Sub
 
     Private Sub TxtBox_LostFocus(sender As Object, e As EventArgs) Handles TextBoxNom.LostFocus, TextBoxPrenom.LostFocus, TextBoxVille.LostFocus
-        'Quand le TxtBox perd le focus, les textes à l'interieurs sont convertit de façon à ce que la 1ère lettre soit en Maj et le reste en minuscule
+        'Quand le TxtBox perd le focus, les textes à l'interieurs sont convertis de façon que la 1ère lettre soit en Maj et le reste en minuscule
         sender.Text = StrConv(LCase(sender.Text), VbStrConv.ProperCase)
     End Sub
 
